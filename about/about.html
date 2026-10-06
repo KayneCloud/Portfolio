@@ -13,7 +13,7 @@
         <button class="accordion" type="button" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-navigation">☰</button>
             <nav id="main-navigation" class="main-navigation" aria-label="Navigation principale">
                 <ul class="navigation-list">
-                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#profil">Profil</a></li>
                     <li><a href="#formations">Formations</a></li>
                     <li><a href="#experiences">Expériences</a></li>
                     <li><a href="#about">About</a></li>
@@ -21,10 +21,16 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <nav class="home-nav">
+                <a href="../index/index.html">Home</a>
+                <a href="../about/about.html">About</a>
+                <a href="../projects/projects.html">Projects</a>
+                <a href="../contact/contact.html">Contact</a>
+            </nav>
     </header>
 
     <main>
-        <section id="profile">
+        <section id="profil">
             <div class="profile-title">
                 <img src="../assets/pp.png" class="profile-photo" alt="">
                 <h2>KAYNE SHAW</h2>
@@ -229,44 +235,6 @@
             </div>
         </section>
 
-        <section id="contact"> <div class="contact-title">
-            <div class="terminal-window">
-                <div class="terminal-titlebar">
-                    <span class="terminal-icon">▣</span>
-                    <span>FORMULAIRE DE CONTACT</span>
-                    <span class="terminal-controls">— □ ✕</span>
-                </div>
-
-                <div class="terminal-content">
-                    <p class="terminal-command">PS C:\Formulaire_Contact&gt; contact --nouveau-message</p>
-
-                    <form class="contact-form terminal-form" action="https://api.web3forms.com/submit" method="post">
-                        <input type="hidden" name="access_key" value="53f51a52-8c60-41ca-8c8d-65be3cfa2619">
-
-                        <div class="terminal-field name-step">
-                            <label for="name">PS C:\Formulaire_Contact&gt; Entrez-votre-nom:<span class="terminal-cursor">_</span></label>
-                            <input id="name" name="name" type="text" autocomplete="name" placeholder="Votre nom" required>
-                        </div>
-
-                        <div class="terminal-field email-step">
-                        <label for="email">PS C:\Formulaire_Contact&gt; Entrez-votre-email:<span class="terminal-cursor">_</span></label>
-                            <input id="email" name="email" type="email" autocomplete="email" placeholder="votre.email@example.com" required>
-                        </div>
-
-                        <div class="terminal-field message-step">
-                            <label for="message">PS C:\Formulaire_Contact&gt; Entrez-votre-message:<span class="terminal-cursor">_</span></label>
-                            <textarea id="message" name="message" rows="3" placeholder="Écrivez votre message" required></textarea>
-                            <p class="confirmation-step">PS C:\Formulaire_Contact&gt; Message prêt. Envoyez le message? [Y/N]:</p>
-                            <div class="terminal-confirmation-buttons">
-                                <button class="terminal-submit" type="submit">Y</button>
-                                <button class="terminal-cancel" type="reset">N</button>
-                            </div>
-                        </div>
-                        <p class="terminal-response">PS C:\Formulaire_Contact&gt; En attente d'une saisie ...</p>
-                    </form>
-                </div>
-            </div>
-        </div></section>
     </main>
     
 <footer>
