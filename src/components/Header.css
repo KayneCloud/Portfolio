@@ -1,0 +1,19 @@
+.site-header {
+    align-items: center;
+    background-color: #1b1b1d;
+    border-bottom: 1px solid #16c79a;
+    display: flex;
+    min-height: 70px;
+    padding: 1rem;
+    position: relative;
+}
+
+.home-nav {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+.home-nav a {
+    color: #16c79a;
+}
