@@ -1,0 +1,19 @@
+.home .profile-photo {
+    width: 120px;
+    height: 120px;
+    border: 4px solid #16c79a;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.home {
+    padding: 1rem;
+}
+
+.h1 {
+    color: #16c79a;
+}
+
+.catchphrase {
+    font-style: bold;
+}
