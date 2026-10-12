@@ -3,13 +3,13 @@ export const education = [
     id: 1,
     date: "2026 - 2029",
     title: "Master of Science: Cloud & Cybersecurity - Epitech Marseille",
-    description: "3-year program: a first intensive year on the fundamentals of development, systems and algorithms, followed by two years of specialization in Cloud and Cybersecurity.",
+    description: "3-year programme: First year of intensive learning, covering developement, system and algorithm fundamentals, followed by two years of specialisation in Cloud computing and Cybersecurity.",
   },
   {
     id: 2,
     date: "2023",
-    title: "Undergraduate for Sports and Physical activity Sciences - Avignon University",
-    description: "The science behind the biology and education in the field of Sports and other Physical activities"
+    title: "Undergraduate in Sports Science - Avignon University",
+    description: "Study of the biological sciences of sport and their applications to everyday life and physical education."
   },
 ]
 
@@ -19,14 +19,56 @@ export const projects = [
     date: "In progress",
     title: "Full-stack job board website",
     items: [
-      "Full-stack development with React (front end) and Flask (back end)",
-      "MySQL database setup",
-      "REST API to manage job offers and applications",
+      "Developping a full-stack job board using react (front-end) and Flask (back-end)",
+      "Setting up MySQL Database",
+      "Creating REST API to manage job postings and applications",
     ],
   },
-  // add the Pygame game and the website project here
+  
+  {
+    id: 2,
+    date: "09/2026",
+    title: "Python game with Pygame",
+    items: [
+      "Developping a python game with pygame",
+      "Managing the score and implementing game mechanics",
+      "Using the terminal to run and test the game",
+    ],
+  },
+
+  {
+    id: 3,
+    date: "09/2026",
+    title: "Front-end portfolio webiste",
+    items: [
+      "Developping with HTML, CSS, JavaScript and React",
+      "Creating a responsive layout",
+    ],
+  },
 ]
 
 export const otherExperience = [
-  // add Éducation nationale and Subway here, same shape as projects
+  {
+    id: 1,
+    date: "2025 - 2026",
+    title: "Physical education teaching assistant - French National Education",
+    items: [
+      "Managing groups",
+      "Organising lessons",
+      "Responding effectively to unexpected situations",
+      "Communicating and adapting",
+    ],
+  },
+
+  {
+    id: 2,
+    date: "2021 - 2022",
+    title: "multi-skilled team member - Subway, Comox (Canada)",
+    items: [
+      "Customer service",
+      "Stock management",
+      "Preparing orders",
+      "Teamwork",
+    ],
+  },
 ]
