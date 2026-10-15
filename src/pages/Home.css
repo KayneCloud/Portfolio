@@ -17,3 +17,21 @@
 .catchphrase {
     font-weight: bold;
 }
+
+.home-cards {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .home-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

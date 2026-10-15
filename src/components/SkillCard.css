@@ -1,0 +1,56 @@
+.card {
+    background-color: #242426;
+    border: 2px solid #16c79a;
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.card h2 {
+    color: #16c79a;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.card-title {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.card-icon {
+    flex-shrink: 0;
+    height: 50px;
+    object-fit: contain;
+    width: 50px;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin: 1.5rem 0 0 1.5rem;
+}
+
+.skills-list li::marker {
+    color: #16c79a;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.card a {
+    color: #16c79a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card a:hover,
+.card a:focus {
+    color: #ffffff;
+    text-decoration: underline;
+}

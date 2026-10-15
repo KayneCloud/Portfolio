@@ -89,4 +89,17 @@ export const skillCards = [
     icon: "hardskillsimage.png",
     items: ["AWS", "Python", "Git / GitHub", "PowerShell", "PHP", "MySQL", "HTML / CSS / JS", "React", "Flask"],
   },
+
+    {
+    id: 3,
+    title: "Soft skills",
+    icon: "softskillsimage.png",
+    items: ["Adaptability", "Teamwork", "Curiosity", "Eagerness to learn", "Critical thinking"],
+  },
+  {
+    id: 4,
+    title: "Languages",
+    icon: "languesimage.png",
+    items: ["English - Native", "French - Native"],
+  },
 ]
