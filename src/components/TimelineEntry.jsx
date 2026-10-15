@@ -6,12 +6,12 @@ function TimelineEntry(props) {
                 <p className="timeline-date">{props.date}</p>
                 <h3>{props.title}</h3>
 
-                {props.description && (
-                    <p className="timeline-description">{props.description}</p>
-                )}
+               {props.description && (
+                   <p className="timeline-description">{props.description}</p>
+               )}
 
-                {props.items && (
-                    <ul className="timeline-description">
+               {props.items && (
+                   <ul className="timeline-description">
                         {props.items.map((item) => (
                             <li key={item}>{item}</li>
                         ))}

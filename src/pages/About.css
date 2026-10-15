@@ -1,0 +1,91 @@
+/*Main Layout*/
+
+.about section {
+    border-bottom: 1px solid #3b3b3e;
+    min-height: 300px;
+    padding: 3rem 1rem;
+}
+
+.about h2 {
+    color: #16c79a;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.about h3 {
+    color: #16c79a;
+    font-size: 1rem;
+}
+
+/*Formations*/
+
+.section-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.section-title {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/*timeline*/
+
+.career-timeline {
+position: relative;
+}
+
+.career-timeline::before {
+    background-color: #16c79a;
+    content: "";
+    left: calc(1rem + 32px);
+    position: absolute;
+    width: 3px;
+    z-index: 0;
+    top: 5.8rem;
+    bottom: 1.5rem;
+}
+
+/*timeline entries*/
+
+.timeline-entry {
+    margin-top: 2rem;
+    padding-left: 5rem;
+    position: relative;
+}
+
+.timeline-marker {
+    background-color: #16c79a;
+    height: 14px;
+    left: 33px;
+    position: absolute;
+    top: 0.5rem;
+    transform: translateX(-50%);
+    width: 14px;
+    z-index: 1;
+}
+
+.timeline-content h3 {
+    color: #16c79a;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    text-transform: uppercase;
+}
+
+.timeline-date {
+    color: whitesmoke;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.timeline-description {
+    color: whitesmoke;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.timeline-content li {
+    padding: 5px;
+}

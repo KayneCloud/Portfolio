@@ -1,23 +1,18 @@
-import TimelineEntry from '../components/TimelineEntry'
-import { education } from '../data/resume'
+import './About.css'
+import TimelineSection from '../components/TimelineSection'
+import { education, projects, otherExperience } from '../data/resume'
 
 function About() {
   return (
-    <main className="about">
-      <h1>About</h1>
-      <section>
-        <h2>Education</h2>
-        {education.map((entry) => (
-          <TimelineEntry
-            key={entry.id}
-            date={entry.date}
-            title={entry.title}
-            description={entry.description}
-            items={entry.items}
-          />
-        ))}
-      </section>
-    </main>
+   <main className="about">
+  <h1>About</h1>
+
+  <div className="career-timeline">
+    <TimelineSection title="Education" icon="formationimage.png" entries={education} />
+    <TimelineSection title="Projects & Experience" icon="experienceimage.png" entries={projects} />
+    <TimelineSection title="Other Experience" icon="experienceimage.png" entries={otherExperience} />
+  </div>
+</main>
   )
 }
 

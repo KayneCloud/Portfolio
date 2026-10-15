@@ -10,10 +10,10 @@
     padding: 1rem;
 }
 
-.h1 {
+.home h1 {
     color: #16c79a;
 }
 
 .catchphrase {
-    font-style: bold;
+    font-weight: bold;
 }
