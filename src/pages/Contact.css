@@ -1,0 +1,16 @@
+.contact {
+    padding: 1rem;
+}
+
+.contact h1 {
+    color: #16c79a;
+}
+
+.contact-intro {
+    margin: 0.5rem 0 2rem 0;
+}
+
+.contact-intro a {
+    color: #16c79a;
+    font-weight: bold;
+}
