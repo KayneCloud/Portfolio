@@ -1,0 +1,22 @@
+.projects {
+    padding: 1rem;
+}
+
+.projects h1 {
+    color: #16c79a;
+}
+
+.projects-intro {
+    margin: 0.5rem 0 2rem 0;
+}
+
+.project-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
