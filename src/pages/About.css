@@ -89,3 +89,16 @@ position: relative;
 .timeline-content li {
     padding: 5px;
 }
+
+/*What I learned*/
+
+.learning-item {
+    border-left: 3px solid #16c79a;
+    margin-top: 1.5rem;
+    padding-left: 1rem;
+}
+
+.learning-item p {
+    line-height: 1.6;
+    margin-top: 0.4rem;
+}

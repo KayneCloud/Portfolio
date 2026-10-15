@@ -103,3 +103,21 @@ export const skillCards = [
     items: ["English - Native", "French - Native"],
   },
 ]
+
+export const learning = [
+  {
+    id: 1,
+    title: "From static pages to React",
+    text: "I started this portfolio in plain HTML and CSS, then rebuilt it with React. I learned to split a page into reusable components and to keep content in data files instead of repeating HTML.",
+  },
+  {
+    id: 2,
+    title: "Working with Git",
+    text: "I learned to commit regularly, work on a branch, merge it back into main, and fix mistakes like files left out of a commit.",
+  },
+  {
+    id: 3,
+    title: "Back-end development in a team",
+    text: "On the job board project I was responsible for the Flask API and the MySQL database, which taught me to agree on an API with a teammate working on the front end.",
+  },
+]

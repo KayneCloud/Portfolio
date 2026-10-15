@@ -35,3 +35,20 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.cv-button {
+    border: 2px solid #16c79a;
+    border-radius: 8px;
+    color: #16c79a;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    padding: 0.7rem 1.2rem;
+    text-decoration: none;
+}
+
+.cv-button:hover,
+.cv-button:focus {
+    background-color: #16c79a;
+    color: #1b1b1d;
+}

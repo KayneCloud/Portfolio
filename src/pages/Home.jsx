@@ -14,7 +14,14 @@ function Home() {
       <p className='catchphrase'>
         Student in 3rd year at Epitech - seeking apprenticeship in Cloud / Cybersecurity
       </p>
-      <p>I'm a third-year student at Epitech Marseille (Pre-MSc in Computer Science), seeking a 33-month apprenticeship placement from January 2027 to September 2029 in cloud computing or cybersecurity. I'm a AWS Certified Cloud Practitioner and preparing for the AWS Certified Solutions Architect - Associate certification. My studies combine the fundamentals of software development, systems, and algorithms with hands-on projects including Python and full-stack web development.</p>
+      <p>I'm a third-year student at Epitech Marseille (Pre-MSc in Computer Science), seeking a 33-month apprenticeship placement from January 2027 to September 2029 in cloud computing or cybersecurity. I'm an AWS Certified Cloud Practitioner and preparing for the AWS Certified Solutions Architect - Associate certification. My studies combine the fundamentals of software development, systems, and algorithms with hands-on projects including Python and full-stack web development.</p>
+      <a
+        className="cv-button"
+        href={import.meta.env.BASE_URL + 'cv-kayne-shaw.pdf'}
+        download
+      >
+        Download my CV (PDF)
+      </a>
       <section className="home-cards">
         <ContactCard />
         {skillCards.map((card) => (
