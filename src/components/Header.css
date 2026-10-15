@@ -16,6 +16,11 @@
 
 .home-nav a {
     color: #16c79a;
+    text-decoration: none;
+}
+
+.home-nav a:hover {
+    color: #ffffff;
 }
 
 .home-nav a.active {

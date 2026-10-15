@@ -72,3 +72,21 @@ export const otherExperience = [
     ],
   },
 ]
+
+export const skillCards = [
+  {
+    id: 1,
+    title: "Certifications",
+    icon: "formationimage.png",
+    items: [
+      "AWS Certified Cloud Practitioner - Foundational (08/2026)",
+      "AWS Certified Solutions Architect - Associate (planned 12/2026)",
+    ],
+  },
+  {
+    id: 2,
+    title: "Skills",
+    icon: "hardskillsimage.png",
+    items: ["AWS", "Python", "Git / GitHub", "PowerShell", "PHP", "MySQL", "HTML / CSS / JS", "React", "Flask"],
+  },
+]
