@@ -1,12 +1,12 @@
 .card {
-    background-color: #242426;
-    border: 2px solid #16c79a;
+    background-color: #11212D;
+    border: 2px solid #4A5C6A;
     border-radius: 16px;
     padding: 1.5rem;
 }
 
 .card h2 {
-    color: #16c79a;
+    color: #CCD0CF;
     font-size: 1.25rem;
     text-transform: uppercase;
 }
@@ -32,7 +32,7 @@
 }
 
 .skills-list li::marker {
-    color: #16c79a;
+    color: #CCD0CF;
 }
 
 .contact-list {
@@ -44,13 +44,13 @@
 }
 
 .card a {
-    color: #16c79a;
+    color: #CCD0CF;
     font-weight: bold;
     text-decoration: none;
 }
 
 .card a:hover,
 .card a:focus {
-    color: #ffffff;
+    color: #9BA8AB;
     text-decoration: underline;
 }

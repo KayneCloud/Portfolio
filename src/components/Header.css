@@ -1,7 +1,7 @@
 .site-header {
     align-items: center;
-    background-color: #1b1b1d;
-    border-bottom: 1px solid #16c79a;
+    background-color: #06141B;
+    border-bottom: 1px solid #253745;
     display: flex;
     min-height: 70px;
     padding: 1rem;
@@ -15,15 +15,15 @@
 }
 
 .home-nav a {
-    color: #16c79a;
+    color: #CCD0CF;
     text-decoration: none;
 }
 
 .home-nav a:hover {
-    color: #ffffff;
+    color: #9BA8AB;
 }
 
 .home-nav a.active {
-    color: #ffffff;
-    border-bottom: 2px solid #16c79a;
+    color: #9BA8AB;
+    border-bottom: 2px solid #CCD0CF;
 }

@@ -1,19 +1,19 @@
 /*Main Layout*/
 
 .about section {
-    border-bottom: 1px solid #3b3b3e;
+    border-bottom: 1px solid #253745;
     min-height: 300px;
     padding: 3rem 1rem;
 }
 
 .about h2 {
-    color: #16c79a;
+    color: #CCD0CF;
     font-size: 2rem;
     text-transform: uppercase;
 }
 
 .about h3 {
-    color: #16c79a;
+    color: #CCD0CF;
     font-size: 1rem;
 }
 
@@ -38,7 +38,7 @@ position: relative;
 }
 
 .career-timeline::before {
-    background-color: #16c79a;
+    background-color: #CCD0CF;
     content: "";
     left: calc(1rem + 32px);
     position: absolute;
@@ -57,7 +57,7 @@ position: relative;
 }
 
 .timeline-marker {
-    background-color: #16c79a;
+    background-color: #CCD0CF;
     height: 14px;
     left: 33px;
     position: absolute;
@@ -68,7 +68,7 @@ position: relative;
 }
 
 .timeline-content h3 {
-    color: #16c79a;
+    color: #CCD0CF;
     font-size: 1rem;
     margin-top: 0.25rem;
     text-transform: uppercase;
@@ -93,7 +93,7 @@ position: relative;
 /*What I learned*/
 
 .learning-item {
-    border-left: 3px solid #16c79a;
+    border-left: 3px solid #4A5C6A;
     margin-top: 1.5rem;
     padding-left: 1rem;
 }

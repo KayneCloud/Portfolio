@@ -121,3 +121,35 @@ export const learning = [
     text: "On the job board project I was responsible for the Flask API and the MySQL database, which taught me to agree on an API with a teammate working on the front end.",
   },
 ]
+
+export const certifications = [
+  {
+    id: 1,
+    name: "AWS Cloud Practitioner",
+    status: "Certified · 08/2026",
+    planned: false,
+  },
+  {
+    id: 2,
+    name: "AWS Solutions Architect – Associate",
+    status: "In progress · 12/2026",
+    planned: true,
+  },
+]
+
+const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/"
+
+export const stack = [
+  { id: 1, name: "AWS", icon: DEVICON + "amazonwebservices/amazonwebservices-plain-wordmark.svg" },
+  { id: 2, name: "Python", icon: DEVICON + "python/python-original.svg" },
+  { id: 3, name: "Git", icon: DEVICON + "git/git-original.svg" },
+  { id: 4, name: "GitHub", icon: DEVICON + "github/github-original.svg", filter: "invert" },
+  { id: 5, name: "PowerShell", icon: DEVICON + "powershell/powershell-original.svg" },
+  { id: 6, name: "PHP", icon: DEVICON + "php/php-original.svg" },
+  { id: 7, name: "MySQL", icon: DEVICON + "mysql/mysql-original.svg", filter: "lighten" },
+  { id: 8, name: "HTML", icon: DEVICON + "html5/html5-original.svg" },
+  { id: 9, name: "CSS", icon: DEVICON + "css3/css3-original.svg" },
+  { id: 10, name: "JavaScript", icon: DEVICON + "javascript/javascript-original.svg" },
+  { id: 11, name: "React", icon: DEVICON + "react/react-original.svg" },
+  { id: 12, name: "Flask", icon: DEVICON + "flask/flask-original.svg", filter: "invert" },
+]
