@@ -3,7 +3,6 @@ import './Contact.css'
 function Contact() {
   return (
     <main className="contact">
-      <h1>Contact</h1>
       <p className="contact-intro">
         Want to talk about a work-study position or a project? Send me a message below,
         or email me at <a href="mailto:kayne.shaw@epitech.eu">kayne.shaw@epitech.eu</a>.

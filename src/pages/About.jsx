@@ -5,7 +5,6 @@ import { education, projects, otherExperience, learning } from '../data/resume'
 function About() {
   return (
     <main className="about">
-      <h1>About</h1>
 
       <div className="career-timeline">
         <TimelineSection title="Education" icon="formationimage.png" entries={education} />

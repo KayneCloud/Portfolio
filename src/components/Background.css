@@ -144,3 +144,11 @@
         animation: none;
     }
 }
+
+/*Phones: show only 8 clouds to keep scrolling smooth*/
+
+@media (max-width: 860px) {
+    .cloud:nth-child(n + 9) {
+        display: none;
+    }
+}

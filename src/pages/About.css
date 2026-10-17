@@ -102,3 +102,33 @@
     line-height: 1.6;
     margin-top: 0.4rem;
 }
+
+/*Phones: smaller titles and icons*/
+
+@media (max-width: 600px) {
+    .about h2 {
+        font-size: 1.4rem;
+    }
+
+    .section-icon {
+        height: 36px;
+        width: 36px;
+    }
+
+    .section-title {
+        gap: 15px;
+    }
+
+    .about section {
+        padding: 2rem 0;
+    }
+
+    /*keep the line and dots centred on the smaller icons*/
+    .career-timeline::before {
+        left: 16.5px;
+    }
+
+    .timeline-marker {
+        left: 18px;
+    }
+}
