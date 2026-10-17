@@ -1,6 +1,7 @@
 import './About.css'
 import TimelineSection from '../components/TimelineSection'
-import { education, projects, otherExperience, learning } from '../data/resume'
+import SkillCard from '../components/SkillCard'
+import { education, projects, otherExperience, learning, skillCards } from '../data/resume'
 
 function About() {
   return (
@@ -11,6 +12,20 @@ function About() {
         <TimelineSection title="Projects & Experience" icon="experienceimage.png" entries={projects} />
         <TimelineSection title="Other Experience" icon="experienceimage.png" entries={otherExperience} />
       </div>
+
+      <section className="personal-skills">
+        <h2>Soft skills &amp; languages</h2>
+        <div className="skill-grid">
+          {skillCards.map((card) => (
+            <SkillCard
+              key={card.id}
+              title={card.title}
+              icon={card.icon}
+              items={card.items}
+            />
+          ))}
+        </div>
+      </section>
 
       <section className="learning">
         <h2>What I learned this year</h2>

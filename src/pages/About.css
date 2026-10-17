@@ -103,6 +103,20 @@
     margin-top: 0.4rem;
 }
 
+/*Soft skills & languages*/
+
+.skill-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /*Phones: smaller titles and icons*/
 
 @media (max-width: 600px) {

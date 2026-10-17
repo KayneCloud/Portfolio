@@ -1,18 +1,16 @@
-.projects h1 {
-    color: #CCD0CF;
+/*The page's own bottom padding would add extra scroll after the stack, so it's removed*/
+
+.projects {
+    padding-bottom: 0;
 }
 
-.projects-intro {
-    margin: 0.5rem 0 2rem 0;
-}
+/*Stacking cards*/
 
 .project-grid {
-    display: grid;
-    gap: 1.5rem;
-}
-
-@media (min-width: 900px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 800px;
+    padding-bottom: var(--end-space, 0px);
 }

@@ -2,7 +2,11 @@
     background-color: #11212D;
     border: 2px solid #4A5C6A;
     border-radius: 16px;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.45);
     padding: 1.5rem;
+    position: sticky;
+    top: calc(var(--first-top, 100px) + var(--i) * 24px);
+    transform-origin: top center;
 }
 
 .project-card h2 {
@@ -54,4 +58,10 @@
 .project-links a:hover,
 .project-links a:focus {
     color: #9BA8AB;
+}
+
+/*Screens too short for the tallest card: cards scroll normally (class set in Projects.jsx)*/
+
+.no-stack .project-card {
+    position: static;
 }

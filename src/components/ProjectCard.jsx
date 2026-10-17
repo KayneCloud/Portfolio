@@ -2,7 +2,7 @@ import './ProjectCard.css'
 
 function ProjectCard(props) {
   return (
-    <article className="project-card">
+    <article className="project-card" style={{ '--i': props.index }}>
       <p className="project-date">{props.date}</p>
       <h2>{props.title}</h2>
 
