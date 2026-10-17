@@ -24,7 +24,7 @@ export const projects = [
       "Creating REST API to manage job postings and applications",
     ],
   },
-  
+
   {
     id: 2,
     date: "09/2026",
@@ -90,7 +90,7 @@ export const skillCards = [
     items: ["AWS", "Python", "Git / GitHub", "PowerShell", "PHP", "MySQL", "HTML / CSS / JS", "React", "Flask"],
   },
 
-    {
+  {
     id: 3,
     title: "Soft skills",
     icon: "softskillsimage.png",
@@ -125,13 +125,13 @@ export const learning = [
 export const certifications = [
   {
     id: 1,
-    name: "AWS Cloud Practitioner",
+    name: "AWS Cloud Practitioner - Foundational",
     status: "Certified · 08/2026",
     planned: false,
   },
   {
     id: 2,
-    name: "AWS Solutions Architect – Associate",
+    name: "AWS Solutions Architect - Associate",
     status: "In progress · 12/2026",
     planned: true,
   },
@@ -139,17 +139,41 @@ export const certifications = [
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/"
 
-export const stack = [
-  { id: 1, name: "AWS", icon: DEVICON + "amazonwebservices/amazonwebservices-plain-wordmark.svg" },
-  { id: 2, name: "Python", icon: DEVICON + "python/python-original.svg" },
-  { id: 3, name: "Git", icon: DEVICON + "git/git-original.svg" },
-  { id: 4, name: "GitHub", icon: DEVICON + "github/github-original.svg", filter: "invert" },
-  { id: 5, name: "PowerShell", icon: DEVICON + "powershell/powershell-original.svg" },
-  { id: 6, name: "PHP", icon: DEVICON + "php/php-original.svg" },
-  { id: 7, name: "MySQL", icon: DEVICON + "mysql/mysql-original.svg", filter: "lighten" },
-  { id: 8, name: "HTML", icon: DEVICON + "html5/html5-original.svg" },
-  { id: 9, name: "CSS", icon: DEVICON + "css3/css3-original.svg" },
-  { id: 10, name: "JavaScript", icon: DEVICON + "javascript/javascript-original.svg" },
-  { id: 11, name: "React", icon: DEVICON + "react/react-original.svg" },
-  { id: 12, name: "Flask", icon: DEVICON + "flask/flask-original.svg", filter: "invert" },
+export const stackGroups = [
+  {
+    id: 1,
+    title: "Cloud & Tools",
+    tools: [
+      {name: "AWS", icon: DEVICON + "amazonwebservices/amazonwebservices-plain-wordmark.svg"},
+      {name: "Git", icon: DEVICON + "git/git-original.svg" },
+      { name: "GitHub", icon: DEVICON + "github/github-original.svg", filter: "invert" },
+      { name: "PowerShell", icon: DEVICON + "powershell/powershell-original.svg" },
+    ],
+  },
+  {
+    id: 2,
+    title: "Languages",
+    tools: [
+      { name: "Python", icon: DEVICON + "python/python-original.svg" },
+      { name: "JavaScript", icon: DEVICON + "javascript/javascript-original.svg" },
+      { name: "PHP", icon: DEVICON + "php/php-original.svg" },
+    ],
+  },
+  {
+    id: 3,
+    title: "Front-end",
+    tools: [
+      { name: "HTML", icon: DEVICON + "html5/html5-original.svg" },
+      { name: "CSS", icon: DEVICON + "css3/css3-original.svg" },
+      { name: "React", icon: DEVICON + "react/react-original.svg" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Back-end & Data",
+    tools: [
+      { name: "Flask", icon: DEVICON + "flask/flask-original.svg", filter: "invert" },
+      { name: "MySQL", icon: DEVICON + "mysql/mysql-original.svg", filter: "lighten" },
+    ],
+  },
 ]

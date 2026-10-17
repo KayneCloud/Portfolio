@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router'
+import Background from './components/Background'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -9,6 +10,7 @@ import Contact from './pages/Contact'
 function App() {
   return (
     <>
+      <Background />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

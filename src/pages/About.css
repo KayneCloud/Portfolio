@@ -34,7 +34,7 @@
 /*timeline*/
 
 .career-timeline {
-position: relative;
+    position: relative;
 }
 
 .career-timeline::before {

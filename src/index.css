@@ -21,3 +21,8 @@ body {
     min-height: 100vh;
 }
 
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
