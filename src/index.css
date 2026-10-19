@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -42,4 +43,10 @@ footer {
 
 main {
     flex: 1;
+}
+
+/*period after titles*/
+
+.dot-accent {
+    color: #4A5C6A;
 }

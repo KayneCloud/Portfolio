@@ -17,6 +17,8 @@
 .about h2 {
     color: #CCD0CF;
     font-size: 2rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
     text-transform: uppercase;
 }
 

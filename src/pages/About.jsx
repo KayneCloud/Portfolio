@@ -14,7 +14,7 @@ function About() {
       </div>
 
       <section className="personal-skills">
-        <h2>Soft skills &amp; languages</h2>
+        <h2>Soft skills &amp; languages<span className='dot-accent'>.</span></h2>
         <div className="skill-grid">
           {skillCards.map((card) => (
             <SkillCard
@@ -28,7 +28,7 @@ function About() {
       </section>
 
       <section className="learning">
-        <h2>What I learned this year</h2>
+        <h2>What I learned this year<span className='dot-accent'>.</span></h2>
         {learning.map((item) => (
           <article key={item.id} className="learning-item">
             <h3>{item.title}</h3>
