@@ -29,16 +29,10 @@
 
 /*Formations*/
 
-.section-icon {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
 .section-title {
     display: flex;
     align-items: center;
-    gap: 25px;
+    margin-left: 32px;
 }
 
 /*timeline*/
@@ -50,7 +44,7 @@
 .career-timeline::before {
     background-color: rgba(204, 208, 207, 0.35);
     content: "";
-    left: calc(1rem + 32px);
+    left: calc(1rem + 6px);
     position: absolute;
     width: 3px;
     z-index: 0;
@@ -62,14 +56,14 @@
 
 .timeline-entry {
     margin-top: 2rem;
-    padding-left: 5rem;
+    padding-left: 3rem;
     position: relative;
 }
 
 .timeline-marker {
     background-color: #CCD0CF;
     height: 14px;
-    left: 33px;
+    left: 8px;
     position: absolute;
     top: 0.5rem;
     transform: translateX(-50%);
@@ -134,26 +128,17 @@
         font-size: 1.4rem;
     }
 
-    .section-icon {
-        height: 36px;
-        width: 36px;
-    }
-
-    .section-title {
-        gap: 15px;
-    }
-
     .about section {
         padding: 2rem 0;
     }
 
     /*keep the line and dots centred on the smaller icons*/
     .career-timeline::before {
-        left: 16.5px;
+        left: 6px;
     }
 
     .timeline-marker {
-        left: 18px;
+        left: 8px;
     }
 }
 

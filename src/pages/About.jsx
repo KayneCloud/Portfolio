@@ -8,9 +8,9 @@ function About() {
     <main className="about">
 
       <div className="career-timeline">
-        <TimelineSection title="Education" icon="formationimage.png" entries={education} />
-        <TimelineSection title="Projects & Experience" icon="experienceimage.png" entries={projects} />
-        <TimelineSection title="Other Experience" icon="experienceimage.png" entries={otherExperience} />
+        <TimelineSection title="Education" entries={education} />
+        <TimelineSection title="Projects & Experience" entries={projects} />
+        <TimelineSection title="Other Experience" entries={otherExperience} />
       </div>
 
       <section className="personal-skills">
@@ -20,7 +20,6 @@ function About() {
             <SkillCard
               key={card.id}
               title={card.title}
-              icon={card.icon}
               items={card.items}
             />
           ))}
