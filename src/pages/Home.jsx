@@ -10,7 +10,7 @@ function Home() {
       <section className="hero">
         <div>
           <h1>Kayne Shaw<span className="dot-accent">.</span></h1>
-          <span className="role">Cloud &amp; Cybersecurity Apprentice</span>
+          <span className="role">Cloud &amp; Cybersecurity Major</span>
           <p className="tagline">
             3rd-year Epitech student, looking for an apprenticeship to build <em>secure cloud infrastructure</em> from January 2027.
           </p>

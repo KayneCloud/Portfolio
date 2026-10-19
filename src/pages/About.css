@@ -1,5 +1,13 @@
 /*Main Layout*/
 
+.about {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
 .about section {
     border-bottom: 1px solid #253745;
     min-height: 300px;
@@ -38,7 +46,7 @@
 }
 
 .career-timeline::before {
-    background-color: #CCD0CF;
+    background-color: rgba(204, 208, 207, 0.35);
     content: "";
     left: calc(1rem + 32px);
     position: absolute;
@@ -145,4 +153,56 @@
     .timeline-marker {
         left: 18px;
     }
+}
+
+/* blur scroll function - header*/
+@keyframes about-heading-reveal {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/*for content*/
+@keyframes about-content-reveal {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/*
+ * Only enable the effect when supported and when
+ * the visitor has not requested reduced motion.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .about h2 {
+      animation: about-heading-reveal 1ms linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 25%;
+    }
+
+    .about .timeline-content,
+    .about .learning-item,
+    .about .skill-grid > * {
+      animation: about-content-reveal 1ms linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 25%;
+    }
+  }
 }
