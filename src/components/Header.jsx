@@ -8,7 +8,7 @@ function Header() {
         <Link to="/" className="logo" aria-label="Kayne Shaw, home">KS</Link>
         <ul>
           <li><NavLink to="/" className="link">Home</NavLink></li>
-          <li><NavLink to="/about" className="link">About</NavLink></li>
+          <li><NavLink to="/resume" className="link">Resume</NavLink></li>
           <li><NavLink to="/projects" className="link">Projects</NavLink></li>
           <li><NavLink to="/contact" className="link">Contact</NavLink></li>
           <li className="hide-sm">

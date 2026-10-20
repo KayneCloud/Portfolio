@@ -1,7 +1,7 @@
 import './About.css'
 import TimelineSection from '../components/TimelineSection'
 import SkillCard from '../components/SkillCard'
-import { education, projects, otherExperience, learning, skillCards } from '../data/resume'
+import { education, otherExperience, learning, skillCards } from '../data/resume'
 
 function About() {
   return (
@@ -9,8 +9,7 @@ function About() {
 
       <div className="career-timeline">
         <TimelineSection title="Education" entries={education} />
-        <TimelineSection title="Projects & Experience" entries={projects} />
-        <TimelineSection title="Other Experience" entries={otherExperience} />
+        <TimelineSection title="Professional Experiences" entries={otherExperience} />
       </div>
 
       <section className="personal-skills">

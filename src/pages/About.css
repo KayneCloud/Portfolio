@@ -66,7 +66,7 @@
     height: 1rem;
     left: 0.5rem;
     position: absolute;
-    top: 0.5rem;
+    top: 0.25rem;
     transform: translateX(-50%);
     width: 1rem;
     z-index: 1;
@@ -74,20 +74,21 @@
 
 .timeline-content h3 {
     color: #CCD0CF;
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-top: 0.25rem;
     text-transform: uppercase;
 }
 
 .timeline-date {
     color: whitesmoke;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-style: italic;
 }
 
 .timeline-description {
     color: whitesmoke;
-    font-size: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
     font-style: italic;
 }
 

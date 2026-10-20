@@ -13,40 +13,6 @@ export const education = [
   },
 ]
 
-export const projects = [
-  {
-    id: 1,
-    date: "In progress",
-    title: "Full-stack job board website",
-    items: [
-      "Developping a full-stack job board using react (front-end) and Flask (back-end)",
-      "Setting up MySQL Database",
-      "Creating REST API to manage job postings and applications",
-    ],
-  },
-
-  {
-    id: 2,
-    date: "09/2026",
-    title: "Python game with Pygame",
-    items: [
-      "Developping a python game with pygame",
-      "Managing the score and implementing game mechanics",
-      "Using the terminal to run and test the game",
-    ],
-  },
-
-  {
-    id: 3,
-    date: "09/2026",
-    title: "Front-end portfolio webiste",
-    items: [
-      "Developping with HTML, CSS, JavaScript and React",
-      "Creating a responsive layout",
-    ],
-  },
-]
-
 export const otherExperience = [
   {
     id: 1,
