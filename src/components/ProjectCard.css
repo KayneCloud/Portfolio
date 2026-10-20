@@ -1,11 +1,11 @@
 .project-card {
     background-color: #11212D;
     border: 2px solid #4A5C6A;
-    border-radius: 16px;
+    border-radius: 1rem;
     box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.45);
     padding: 1.5rem;
     position: sticky;
-    top: calc(var(--first-top, 100px) + var(--i) * 24px);
+    top: calc(var(--first-top, 6.25rem) + var(--i) * 24px);
     transform-origin: top center;
 }
 
@@ -18,14 +18,14 @@
 
 .project-card h3 {
     color: #9BA8AB;
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-top: 1rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
 }
 
 .project-date {
     color: whitesmoke;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-style: italic;
 }
 
@@ -39,8 +39,8 @@
 .tag-list li {
     border: 1px solid #4A5C6A;
     border-radius: 999px;
-    font-size: 0.85rem;
-    padding: 0.2rem 0.7rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
 }
 
 .project-links {

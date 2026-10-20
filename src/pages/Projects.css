@@ -11,6 +11,6 @@
     flex-direction: column;
     gap: 2rem;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 50rem;
     padding-bottom: var(--end-space, 0px);
 }

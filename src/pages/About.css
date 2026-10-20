@@ -3,14 +3,14 @@
 .about {
   box-sizing: border-box;
   width: 100%;
-  max-width: 800px;
+  max-width: 50rem;
   margin: 2rem auto;
   padding: 0 1.5rem;
 }
 
 .about section {
     border-bottom: 1px solid #253745;
-    min-height: 300px;
+    min-height: 18.75rem;
     padding: 3rem 1rem;
 }
 
@@ -32,7 +32,7 @@
 .section-title {
     display: flex;
     align-items: center;
-    margin-left: 32px;
+    margin-left: 2rem;
 }
 
 /*timeline*/
@@ -44,11 +44,12 @@
 .career-timeline::before {
     background-color: rgba(204, 208, 207, 0.35);
     content: "";
-    left: calc(1rem + 6px);
+    left: 1.5rem;
+    transform: translateX(-50%);
     position: absolute;
     width: 3px;
     z-index: 0;
-    top: 5.8rem;
+    top: 5.75rem;
     bottom: 1.5rem;
 }
 
@@ -62,12 +63,12 @@
 
 .timeline-marker {
     background-color: #CCD0CF;
-    height: 14px;
-    left: 8px;
+    height: 1rem;
+    left: 0.5rem;
     position: absolute;
     top: 0.5rem;
     transform: translateX(-50%);
-    width: 14px;
+    width: 1rem;
     z-index: 1;
 }
 
@@ -80,18 +81,18 @@
 
 .timeline-date {
     color: whitesmoke;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-style: italic;
 }
 
 .timeline-description {
     color: whitesmoke;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-style: italic;
 }
 
 .timeline-content li {
-    padding: 5px;
+    padding: 0.25rem;
 }
 
 /*What I learned*/
@@ -104,7 +105,7 @@
 
 .learning-item p {
     line-height: 1.6;
-    margin-top: 0.4rem;
+    margin-top: 0.5rem;
 }
 
 /*Soft skills & languages*/
@@ -125,7 +126,7 @@
 
 @media (max-width: 600px) {
     .about h2 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .about section {
@@ -134,11 +135,11 @@
 
     /*keep the line and dots centred on the smaller icons*/
     .career-timeline::before {
-        left: 6px;
+        left: 0.5rem;
     }
 
     .timeline-marker {
-        left: 8px;
+        left: 0.5rem;
     }
 }
 
@@ -147,7 +148,7 @@
   from {
     opacity: 0;
     filter: blur(10px);
-    transform: translateY(40px);
+    transform: translateY(2.5rem);
   }
 
   to {
@@ -162,7 +163,7 @@
   from {
     opacity: 0;
     filter: blur(10px);
-    transform: translateY(40px);
+    transform: translateY(2.5rem);
   }
 
   to {

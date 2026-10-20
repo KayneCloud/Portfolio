@@ -5,7 +5,7 @@
     flex: 1;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 68.75rem;
     padding: 0 1.5rem 1.5rem;
     width: 100%;
 }
@@ -23,7 +23,7 @@
 
 .home h1 {
     color: #CCD0CF;
-    font-size: clamp(2.6rem, 6.2vw, 4.6rem);
+    font-size: clamp(2.5rem, 6.2vw, 4.5rem);
     letter-spacing: -0.02em;
     line-height: 1;
     text-transform: uppercase;
@@ -35,10 +35,10 @@
     border-radius: 999px;
     color: #CCD0CF;
     display: inline-block;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: bold;
-    margin: 1.1rem 0 1.3rem;
-    padding: 0.4rem 0.9rem;
+    margin: 1rem 0 1.25rem;
+    padding: 0.5rem 1rem;
 }
 
 .tagline {
@@ -60,13 +60,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 1.8rem;
+    margin-top: 1.75rem;
 }
 
 .btn {
-    border-radius: 10px;
+    border-radius: 0.75rem;
     font-weight: bold;
-    padding: 0.8rem 1.3rem;
+    padding: 0.75rem 1.25rem;
     text-decoration: none;
     transition: border-color 0.2s ease, transform 0.2s ease;
 }
@@ -85,13 +85,13 @@
 
 .btn-primary .arrow {
     display: inline-block;
-    margin-left: 0.4rem;
+    margin-left: 0.5rem;
     transition: transform 0.2s ease;
 }
 
 .btn-primary:hover .arrow,
 .btn-primary:focus .arrow {
-    transform: translateX(4px);
+    transform: translateX(0.25rem);
 }
 
 .btn-secondary {
@@ -121,13 +121,13 @@
 .photo {
     aspect-ratio: 1160 / 1356;
     border: 3px solid #253745;
-    border-radius: 22px;
+    border-radius: 1.5rem;
     display: block;
     -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
     mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
     object-fit: cover;
     position: relative;
-    width: min(290px, 26vw);
+    width: min(18.25rem, 26vw);
 }
 
 /*Bottom panel*/
@@ -136,14 +136,14 @@
     backdrop-filter: blur(10px);
     background-color: rgba(17, 33, 45, 0.75);
     border: 1px solid #253745;
-    border-radius: 14px;
+    border-radius: 1rem;
     display: grid;
     grid-template-columns: 1fr 2.2fr;
-    margin-top: 1.2rem;
+    margin-top: 1.25rem;
 }
 
 .col {
-    padding: 1.1rem 1.4rem;
+    padding: 1rem 1.5rem;
 }
 
 .col + .col {
@@ -152,7 +152,7 @@
 
 .col h2 {
     color: #CCD0CF;
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-bottom: 0.75rem;
 }
 
@@ -161,36 +161,36 @@
 .cert {
     align-items: center;
     display: flex;
-    gap: 0.7rem;
+    gap: 0.75rem;
 }
 
 .cert + .cert {
-    margin-top: 0.6rem;
+    margin-top: 0.5rem;
 }
 
 .cert img {
-    height: 22px;
-    width: 22px;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 .cert strong {
     color: #CCD0CF;
     display: block;
-    font-size: 0.82rem;
+    font-size: 0.75rem;
 }
 
 .cert small {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
 }
 
 .status-dot {
     background-color: #CCD0CF;
     border-radius: 50%;
     display: inline-block;
-    height: 6px;
-    margin-right: 0.3rem;
+    height: 0.5rem;
+    margin-right: 0.25rem;
     vertical-align: middle;
-    width: 6px;
+    width: 0.5rem;
 }
 
 .planned .status-dot {
@@ -207,7 +207,7 @@
 }
 
 .group h3 {
-    font-size: 0.68rem;
+    font-size: 0.75rem;
     font-weight: normal;
     letter-spacing: 0.1em;
     margin-bottom: 0.5rem;
@@ -217,7 +217,7 @@
 .chips {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.45rem;
+    gap: 0.5rem;
     list-style: none;
 }
 
@@ -225,13 +225,15 @@
     align-items: center;
     background-color: #06141B;
     border: 1px solid #253745;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     color: #CCD0CF;
     display: flex;
-    font-size: 0.78rem;
-    gap: 0.4rem;
-    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem;
     transition: border-color 0.2s ease, transform 0.2s ease;
+    cursor: default;
+    user-select: none;
 }
 
 .chip:hover {
@@ -240,8 +242,8 @@
 }
 
 .chip img {
-    height: 15px;
-    width: 15px;
+    height: 1rem;
+    width: 1rem;
 }
 
 .invert {
@@ -266,7 +268,7 @@
     }
 
     .photo {
-        width: 170px;
+        width: 10.75rem;
     }
 
     .tagline {
@@ -278,7 +280,7 @@
         flex-direction: column;
         margin-left: auto;
         margin-right: auto;
-        max-width: 280px;
+        max-width: 17.5rem;
     }
 
     .btn {
@@ -303,45 +305,45 @@
 
 @media (min-width: 861px) and (max-height: 760px) {
     .home {
-        padding-bottom: 0.8rem;
+        padding-bottom: 0.75rem;
     }
 
     .hero {
-        padding: 1rem 0 0.6rem;
+        padding: 1rem 0 0.5rem;
     }
 
     .home h1 {
-        font-size: clamp(2.2rem, 8vh, 4.6rem);
+        font-size: clamp(2.25rem, 8vh, 4.5rem);
     }
 
     .role {
-        font-size: 0.8rem;
-        margin: 0.7rem 0 0.8rem;
+        font-size: 0.75rem;
+        margin: 0.75rem 0 0.75rem;
     }
 
     .tagline {
-        font-size: clamp(0.95rem, 2.4vh, 1.25rem);
+        font-size: clamp(1rem, 2.4vh, 1.25rem);
         max-width: 46ch;
     }
 
     .buttons {
-        margin-top: 1.1rem;
+        margin-top: 1rem;
     }
 
     .btn {
-        padding: 0.65rem 1.1rem;
+        padding: 0.75rem 1rem;
     }
 
     .photo {
-        width: min(290px, 26vw, 42vh);
+        width: min(18.25rem, 26vw, 42vh);
     }
 
     .strip {
-        margin-top: 0.6rem;
+        margin-top: 0.5rem;
     }
 
     .col {
-        padding: 0.75rem 1.2rem;
+        padding: 0.75rem 1.25rem;
     }
 
     .col h2 {
@@ -349,7 +351,7 @@
     }
 
     .cert + .cert {
-        margin-top: 0.4rem;
+        margin-top: 0.5rem;
     }
 
     .stack-groups {
@@ -357,15 +359,15 @@
     }
 
     .group h3 {
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.25rem;
     }
 
     .chips {
-        gap: 0.35rem;
+        gap: 0.25rem;
     }
 
     .chip {
-        font-size: 0.74rem;
+        font-size: 0.75rem;
         padding: 0.25rem 0.5rem;
     }
 }
@@ -378,7 +380,7 @@
     }
 
     .hero {
-        padding: 0.6rem 0 0.4rem;
+        padding: 0.5rem 0 0.5rem;
     }
 
     .home h1 {
@@ -390,10 +392,10 @@
     }
 
     .buttons {
-        margin-top: 0.8rem;
+        margin-top: 0.75rem;
     }
 
     .photo {
-        width: min(290px, 26vw, 38vh);
+        width: min(18.25rem, 26vw, 38vh);
     }
 }
