@@ -15,21 +15,22 @@ export const projectList = [
       { name: "REST API" },
     ],
     skills: ["API design", "Database modelling", "Teamwork"],
-    links: [],
-  },
-  {
-    id: 2,
-    title: "Hangman game with Pygame",
-    date: "09/2026",
-    context: "Personal project to practise Python.",
-    objective: "Create a playable hangman game, first in the terminal, then with a graphical interface.",
-    technologies: [
-      { name: "Python", icon: DEVICON + "python/python-original.svg" },
-      { name: "Pygame" },
-    ],
-    skills: ["Game logic", "Debugging", "Testing in the terminal"],
     links: [
-      { label: "Source code", url: "https://github.com/KayneCloud/Hangman-python-game" },
+      { label: "Source code", url: "https://github.com/KayneCloud/Job_Board" },
+    ],
+  },
+    {
+    id: 2,
+    title: "Java Game",
+    date: "In progress",
+    context: "Epitech team project, build a 2D game with Java.",
+    objective: "Build a video-game using Java",
+    technologies: [
+      { name: "Java", icon: DEVICON + "java/java-original.svg" },
+    ],
+    skills: ["", "", ""],
+    links: [
+      { label: "No source code yet", url: "" },
     ],
   },
   {
@@ -49,6 +50,21 @@ export const projectList = [
     skills: ["Responsive design", "Accessibility", "Git workflow"],
     links: [
       { label: "Source code", url: "https://github.com/KayneCloud/Portfolio" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Hangman game with Pygame",
+    date: "09/2026",
+    context: "Personal project to practise Python.",
+    objective: "Create a playable hangman game, first in the terminal, then with a graphical interface.",
+    technologies: [
+      { name: "Python", icon: DEVICON + "python/python-original.svg" },
+      { name: "Pygame" },
+    ],
+    skills: ["Game logic", "Debugging", "Testing in the terminal"],
+    links: [
+      { label: "Source code", url: "https://github.com/KayneCloud/Hangman-python-game" },
     ],
   },
 ]

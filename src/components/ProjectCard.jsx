@@ -1,51 +1,67 @@
 import './ProjectCard.css'
 
+const GITHUB_ICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg'
+
 function ProjectCard(props) {
+  const number = String(props.index + 1).padStart(2, '0')
+
   return (
     <article className="project-card" style={{ '--i': props.index }}>
-      <p className="project-date">{props.date}</p>
-      <h2>{props.title}</h2>
+      <div className="card-top">
+        <span className="card-number" aria-hidden="true">{number}</span>
+        <span className="card-date">{props.date}</span>
+      </div>
 
-      <h3>Context</h3>
-      <p>{props.context}</p>
+      <div className="card-body">
+        <h2>{props.title}<span className="dot-accent">.</span></h2>
+        <p className="card-summary">{props.objective}</p>
 
-      <h3>Objective</h3>
-      <p>{props.objective}</p>
+        <div className="card-meta">
+          <div>
+            <h3>Context</h3>
+            <p>{props.context}</p>
+          </div>
 
-      {props.role && (
-        <>
-          <h3>My role</h3>
-          <p>{props.role}</p>
-        </>
-      )}
+          {props.role && (
+            <div>
+              <h3>My role</h3>
+              <p>{props.role}</p>
+            </div>
+          )}
 
-      <h3>Technologies</h3>
-      <ul className="tech-list">
-        {props.technologies.map((tech) => (
-          <li key={tech.name} className="tech-chip">
-            {tech.icon && <img src={tech.icon} alt="" className={tech.filter} />}
-            {tech.name}
-          </li>
-        ))}
-      </ul>
+          <div>
+            <h3>Technologies</h3>
+            <ul className="tech-list">
+              {props.technologies.map((tech) => (
+                <li key={tech.name} className="tech-chip">
+                  {tech.icon && <img src={tech.icon} alt="" className={tech.filter} />}
+                  {tech.name}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-      <h3>Skills</h3>
-      <ul className="tag-list">
-        {props.skills.map((skill) => (
-          <li key={skill}>{skill}</li>
-        ))}
-      </ul>
+          <div>
+            <h3>Skills</h3>
+            <p className="skill-list">
+              {props.skills.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </p>
+          </div>
+        </div>
+      </div>
 
       {props.links.length > 0 && (
-        <ul className="project-links">
+        <div className="card-footer">
           {props.links.map((link) => (
-            <li key={link.url}>
-              <a href={link.url} target="_blank" rel="noopener noreferrer">
-                {link.label}
-              </a>
-            </li>
+            <a key={link.url} className="repo-link" href={link.url} target="_blank" rel="noopener noreferrer">
+              {link.url.includes('github.com') && <img src={GITHUB_ICON} alt="" />}
+              {link.label}
+              <span className="arrow" aria-hidden="true">↗</span>
+            </a>
           ))}
-        </ul>
+        </div>
       )}
     </article>
   )
