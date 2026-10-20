@@ -2,6 +2,7 @@ import './Home.css'
 import { Link } from 'react-router'
 import { certifications, stackGroups } from '../data/resume'
 
+const DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/'
 const AWS_LOGO = 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg'
 
 function Home() {
@@ -37,7 +38,7 @@ function Home() {
           <h2>Certifications<span className="dot-accent">.</span></h2>
           {certifications.map((cert) => (
             <div key={cert.id} className={`cert ${cert.planned ? 'planned' : ''}`}>
-              <img src={AWS_LOGO} alt="" />
+              <img src={cert.logo ? DEVICON + cert.logo : AWS_LOGO} alt="" />
               <div>
                 <strong>{cert.name}</strong>
                 <small><span className="status-dot"></span>{cert.status}</small>

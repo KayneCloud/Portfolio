@@ -119,6 +119,13 @@ export const certifications = [
     status: "In progress · 12/2026",
     planned: true,
   },
+  {
+    id: 3,
+    name: "Introduction to Linux (LFS101)",
+    status: "In progress · 11/2026",
+    planned: true,
+    logo: "linux/linux-original.svg",
+  },
 ]
 
 const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/"
@@ -139,6 +146,7 @@ export const stackGroups = [
     title: "Languages",
     tools: [
       { name: "Python", icon: DEVICON + "python/python-original.svg" },
+      { name: "Java", icon: DEVICON + "java/java-original.svg" },
       { name: "JavaScript", icon: DEVICON + "javascript/javascript-original.svg" },
       { name: "PHP", icon: DEVICON + "php/php-original.svg" },
     ],
