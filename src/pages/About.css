@@ -186,7 +186,7 @@
       animation-range: entry 0% cover 25%;
     }
 
-    .about .timeline-content,
+    .about .timeline-entry,
     .about .learning-item,
     .about .skill-grid > * {
       animation: about-content-reveal 1ms linear both;

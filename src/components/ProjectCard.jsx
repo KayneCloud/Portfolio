@@ -20,9 +20,12 @@ function ProjectCard(props) {
       )}
 
       <h3>Technologies</h3>
-      <ul className="tag-list">
+      <ul className="tech-list">
         {props.technologies.map((tech) => (
-          <li key={tech}>{tech}</li>
+          <li key={tech.name} className="tech-chip">
+            {tech.icon && <img src={tech.icon} alt="" className={tech.filter} />}
+            {tech.name}
+          </li>
         ))}
       </ul>
 

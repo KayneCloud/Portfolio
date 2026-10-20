@@ -33,7 +33,7 @@ function Projects() {
       grid.style.setProperty('--end-space', Math.max(space, 0) + 'px')
     }
 
-    // 2. Shrink and dim each card as the next one slides over it
+    // 2. Dim each card as the next one slides over it
     function update() {
       const firstTop = parseFloat(grid.style.getPropertyValue('--first-top'))
       const isStacking = !grid.classList.contains('no-stack')
@@ -41,14 +41,12 @@ function Projects() {
       cards.forEach((card, i) => {
         const next = cards[i + 1]
         if (!next || !isStacking) {
-          card.style.transform = ''
           card.style.filter = ''
           return
         }
         const nextStick = firstTop + (i + 1) * PEEK
         const distance = next.getBoundingClientRect().top - nextStick
         const progress = Math.min(Math.max(1 - distance / card.offsetHeight, 0), 1)
-        card.style.transform = `scale(${1 - 0.05 * progress})`
         card.style.filter = `brightness(${1 - 0.3 * progress})`
       })
     }
