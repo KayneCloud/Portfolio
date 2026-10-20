@@ -43,14 +43,16 @@ export const skillCards = [
   {
     id: 3,
     title: "Soft skills",
-    icon: "softskillsimage.png",
     items: ["Adaptability", "Teamwork", "Curiosity", "Eagerness to learn", "Critical thinking"],
   },
   {
     id: 4,
     title: "Languages",
-    icon: "languesimage.png",
-    items: ["English - Native", "French - Native"],
+    languages: [
+      { name: "English", level: "Native", flag: "uk" },
+      { name: "French", level: "Native", flag: "fr" },
+      { name: "Japanese", level: "Elementary", flag: "jp" },
+    ],
   },
 ]
 

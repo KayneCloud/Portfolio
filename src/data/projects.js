@@ -19,7 +19,7 @@ export const projectList = [
       { label: "Source code", url: "https://github.com/KayneCloud/Job_Board" },
     ],
   },
-    {
+  {
     id: 2,
     title: "Java Game",
     date: "In progress",
@@ -56,7 +56,7 @@ export const projectList = [
     id: 4,
     title: "Hangman game with Pygame",
     date: "09/2026",
-    context: "Personal project to practise Python.",
+    context: "Personal project to practice Python.",
     objective: "Create a playable hangman game, first in the terminal, then with a graphical interface.",
     technologies: [
       { name: "Python", icon: DEVICON + "python/python-original.svg" },

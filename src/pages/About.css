@@ -112,6 +112,7 @@
 /*Soft skills & languages*/
 
 .skill-grid {
+    align-items: start;
     display: grid;
     gap: 1.5rem;
     margin-top: 1.5rem;
@@ -174,6 +175,21 @@
   }
 }
 
+/*the reverse: blur out and drift up when leaving at the top*/
+@keyframes about-hide {
+  from {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(-2.5rem);
+  }
+}
+
 /*
  * Only enable the effect when supported and when
  * the visitor has not requested reduced motion.
@@ -181,17 +197,25 @@
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .about h2 {
-      animation: about-heading-reveal 1ms linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 25%;
+      animation:
+        about-heading-reveal 1ms linear both,
+        about-hide 1ms linear forwards;
+      animation-timeline: view(), view();
+      animation-range:
+        entry 0% cover 25%,
+        exit 0% exit 100%;
     }
 
     .about .timeline-entry,
     .about .learning-item,
     .about .skill-grid > * {
-      animation: about-content-reveal 1ms linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 25%;
+      animation:
+        about-content-reveal 1ms linear both,
+        about-hide 1ms linear forwards;
+      animation-timeline: view(), view();
+      animation-range:
+        entry 0% cover 25%,
+        exit 0% exit 100%;
     }
   }
 }

@@ -1,16 +1,28 @@
 import './SkillCard.css'
+import Flag from './Flag'
 
 function SkillCard(props) {
   return (
     <article className="card">
-      <div className='card-title'>
-        <h2>{props.title}</h2>
-      </div>
-      <ul className="skills-list">
-        {props.items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+      <h3 className="card-heading">{props.title}<span className="dot-accent">.</span></h3>
+
+      {props.languages ? (
+        <ul className="lang-list">
+          {props.languages.map((lang) => (
+            <li key={lang.name}>
+              <Flag country={lang.flag} />
+              <span className="lang-name">{lang.name}</span>
+              <span className={`lang-level ${lang.level === 'Native' ? 'native' : ''}`}>{lang.level}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <ul className="skills-list">
+          {props.items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      )}
     </article>
   )
 }

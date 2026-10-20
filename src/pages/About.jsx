@@ -13,13 +13,13 @@ function About() {
       </div>
 
       <section className="personal-skills">
-        <h2>Soft skills &amp; languages<span className='dot-accent'>.</span></h2>
         <div className="skill-grid">
           {skillCards.map((card) => (
             <SkillCard
               key={card.id}
               title={card.title}
               items={card.items}
+              languages={card.languages}
             />
           ))}
         </div>
