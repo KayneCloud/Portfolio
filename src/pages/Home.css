@@ -8,6 +8,7 @@
     max-width: 68.75rem;
     padding: 0 1.5rem 1.5rem;
     width: 100%;
+    overflow-x: clip;
 }
 
 /*Hero*/
