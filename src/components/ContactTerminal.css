@@ -1,0 +1,222 @@
+/*Window*/
+
+.term {
+    background-color: #0C0F12;
+    border: 1px solid #253745;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+    cursor: text;
+    overflow: hidden;
+}
+
+/*Top bar: tab, + and window buttons*/
+
+.term-bar {
+    align-items: stretch;
+    background-color: #1B242B;
+    display: flex;
+    height: 2.5rem;
+    user-select: none;
+}
+
+.term-tab {
+    align-items: center;
+    background-color: #0C0F12;
+    border-radius: 0.5rem 0.5rem 0 0;
+    color: #F2F2F2;
+    display: flex;
+    font-size: 0.875rem;
+    gap: 0.625rem;
+    margin: 0.375rem 0 0 0.375rem;
+    padding: 0 0.75rem;
+    white-space: nowrap;
+    width: 13rem;
+}
+
+.term-tab-icon {
+    align-items: center;
+    background-color: #2F6FD6;
+    border-radius: 0.1875rem;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Consolas, monospace;
+    font-size: 0.5625rem;
+    font-weight: bold;
+    height: 1rem;
+    justify-content: center;
+    width: 1.125rem;
+}
+
+.term-tab-x {
+    color: #CCD0CF;
+    font-size: 0.875rem;
+    margin-left: auto;
+}
+
+.term-bar-btns {
+    align-items: center;
+    color: #CCD0CF;
+    display: flex;
+    gap: 0.25rem;
+    padding: 0 0.5rem;
+}
+
+.term-bar-btns span {
+    padding: 0 0.5rem;
+}
+
+.term-bar-btns .term-sep {
+    border-left: 1px solid #3A4650;
+    height: 1.125rem;
+    padding: 0;
+}
+
+.term-win {
+    align-items: center;
+    color: #CCD0CF;
+    display: flex;
+    margin-left: auto;
+}
+
+.term-win span {
+    font-size: 0.875rem;
+    padding: 0 1.125rem;
+}
+
+/*Text area*/
+
+.term-body {
+    color: #CCCCCC;
+    font-family: "Cascadia Mono", Consolas, "Courier New", monospace;
+    font-size: 0.9375rem;
+    height: 21rem;
+    line-height: 1.5;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0.75rem 1rem 1rem;
+}
+
+.term-body p {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.term-typed {
+    color: #F2F2F2;
+}
+
+.term-dim {
+    color: #767676;
+}
+
+.term-good {
+    color: #8FD18F;
+}
+
+.term-error {
+    color: #E06C75;
+}
+
+/*The line you are typing on*/
+
+.term-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.term-prompt {
+    white-space: pre-wrap;
+}
+
+.term-live {
+    display: flex;
+    flex: 1 1 6ch;
+    min-width: 6ch;
+    position: relative;
+}
+
+/*The real input is invisible; .term-mirror shows the text with a thin blinking cursor*/
+
+.term-live input {
+    background: transparent;
+    border: 0;
+    caret-color: transparent;
+    color: transparent;
+    flex: 1;
+    font: inherit;
+    min-width: 0;
+    outline: none;
+    padding: 0;
+}
+
+.term-mirror {
+    color: #F2F2F2;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    white-space: pre;
+}
+
+.term-mirror::after {
+    animation: term-blink 1s steps(1) infinite;
+    background-color: #F2F2F2;
+    content: "";
+    display: inline-block;
+    height: 1.15em;
+    margin-left: 1px;
+    vertical-align: text-bottom;
+    width: 1px;
+}
+
+@keyframes term-blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/*Y / N buttons*/
+
+.term-yn-wrap {
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+}
+
+.term-yn {
+    background: none;
+    border: 1px solid #4A5C6A;
+    border-radius: 0.25rem;
+    color: #F2F2F2;
+    cursor: pointer;
+    font: inherit;
+    line-height: 1.3;
+    margin-right: 0.375rem;
+    padding: 0 0.5rem;
+}
+
+.term-yn:hover,
+.term-yn:focus {
+    background-color: #CCD0CF;
+    color: #0C0F12;
+}
+
+/*Phones*/
+
+@media (max-width: 600px) {
+    .term-body {
+        font-size: 0.8125rem;
+        height: 18rem;
+    }
+
+    .term-tab {
+        width: auto;
+    }
+
+    .term-win span {
+        padding: 0 0.625rem;
+    }
+
+        .term-win {
+        display: none;
+    }
+}

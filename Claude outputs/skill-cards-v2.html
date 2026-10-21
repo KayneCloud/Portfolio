@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skill Cards v2</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#06141B; color:#9BA8AB; font-family:Arial,Helvetica,sans-serif; padding:2.5rem 1.5rem 4rem; }
+  body::before { content:""; position:fixed; left:50%; bottom:-55vh; width:140vw; height:80vh; transform:translateX(-50%);
+                 background:radial-gradient(closest-side, rgba(74,92,106,.55), rgba(37,55,69,.25) 55%, transparent 100%); pointer-events:none; }
+  .wrap { margin:0 auto; max-width:50rem; position:relative; }
+  .intro { font-size:.875rem; margin-bottom:2rem; } .intro strong { color:#CCD0CF; }
+  .section h2 { color:#CCD0CF; font-size:2rem; letter-spacing:-.02em; line-height:1.1; text-transform:uppercase; }
+  .dot-accent { color:#4A5C6A; }
+
+  /* wider soft-skills card, narrower languages card: their heights now match */
+  .skill-grid { align-items:stretch; display:grid; gap:1.5rem; grid-template-columns:1.6fr 1fr; margin-top:1.5rem; }
+
+  /* ---------- CARD ---------- */
+  .card {
+    backdrop-filter:blur(12px);
+    background:
+      radial-gradient(circle at 0% 0%, rgba(155,168,171,.14), transparent 55%),
+      linear-gradient(180deg, rgba(37,55,69,.55), rgba(17,33,45,.9) 45%);
+    border:1px solid #253745; border-radius:1.25rem; overflow:hidden; padding:1.5rem 1.75rem 1.75rem; position:relative;
+    transition:border-color .25s, transform .25s;
+  }
+  .card:hover { border-color:#4A5C6A; transform:translateY(-2px); }
+  .card::before { content:""; position:absolute; inset:0 0 auto 0; height:1px; background:linear-gradient(90deg, transparent, rgba(204,208,207,.55), transparent); }
+  .card-heading { align-items:center; color:#CCD0CF; display:flex; font-size:1.25rem; gap:.75rem; letter-spacing:-.02em; text-transform:uppercase; }
+  /* small fading line after the title */
+  .card-heading::after { background:linear-gradient(90deg, #253745, transparent); content:""; flex:1; height:1px; }
+
+  /* soft skills: tiles in two columns */
+  .tiles { display:grid; gap:.75rem; grid-template-columns:1fr 1fr; list-style:none; margin-top:1.25rem; }
+  .tile { align-items:center; background:rgba(6,20,27,.55); border:1px solid #253745; border-radius:.75rem; color:#CCD0CF;
+          display:flex; font-size:.875rem; gap:.75rem; padding:.75rem 1rem; transition:border-color .2s, background-color .2s; }
+  .tile::before { background:#CCD0CF; content:""; flex-shrink:0; height:.5rem; width:.5rem; }
+  /* an odd last tile spans both columns instead of sitting alone */
+  .tile:last-child:nth-child(odd) { grid-column:1 / -1; }
+  .tile:hover { background:rgba(37,55,69,.5); border-color:#4A5C6A; }
+
+  /* languages: one tile per language */
+  .langs { display:grid; gap:.75rem; list-style:none; margin-top:1.25rem; }
+  .lang { align-items:center; background:rgba(6,20,27,.55); border:1px solid #253745; border-radius:.75rem; display:flex; gap:1rem;
+          padding:.75rem 1rem; transition:border-color .2s, background-color .2s; }
+  .lang:hover { background:rgba(37,55,69,.5); border-color:#4A5C6A; }
+  .flag { border-radius:.25rem; box-shadow:0 0 0 1px #4A5C6A; flex-shrink:0; height:1.5rem; width:2.25rem; }
+  .lang-name { color:#CCD0CF; font-size:1rem; font-weight:bold; }
+  .lang-level { background:#253745; border:1px solid #4A5C6A; border-radius:999px; color:#CCD0CF; font-size:.75rem; margin-left:auto; padding:.25rem .75rem; }
+  /* -------------------------- */
+
+  @media (max-width:700px) {
+    .skill-grid { grid-template-columns:1fr; }
+    .section h2 { font-size:1.5rem; }
+    .card { padding:1.25rem; }
+  }
+  @media (max-width:420px) { .tiles { grid-template-columns:1fr; } }
+</style></head>
+<body><div class="wrap">
+  <p class="intro"><strong>Skill cards, v2</strong> — Japanese removed. Hover the cards and the tiles.</p>
+  <section class="section">
+    <h2>Soft skills &amp; languages<span class="dot-accent">.</span></h2>
+    <div class="skill-grid">
+      <article class="card">
+        <h3 class="card-heading"><span>Soft skills<span class="dot-accent">.</span></span></h3>
+        <ul class="tiles"><li class="tile">Adaptability</li><li class="tile">Teamwork</li><li class="tile">Curiosity</li><li class="tile">Eagerness to learn</li><li class="tile">Critical thinking</li></ul>
+      </article>
+      <article class="card">
+        <h3 class="card-heading"><span>Languages<span class="dot-accent">.</span></span></h3>
+        <ul class="langs">
+          <li class="lang"><svg viewBox="0 0 60 30" class="flag" aria-hidden="true"><clipPath id="uks"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="ukt"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#uks)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#ukt)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg><span class="lang-name">English</span><span class="lang-level">Native</span></li>
+          <li class="lang"><svg viewBox="0 0 3 2" class="flag" aria-hidden="true"><rect width="1" height="2" fill="#002654"/><rect width="1" height="2" x="1" fill="#fff"/><rect width="1" height="2" x="2" fill="#CE1126"/></svg><span class="lang-name">French</span><span class="lang-level">Native</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+</div></body></html>

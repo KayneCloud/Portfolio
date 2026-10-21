@@ -1,53 +1,58 @@
 import './Contact.css'
+import { useState } from 'react'
+import ContactTerminal from '../components/ContactTerminal'
+
+const DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/'
 
 function Contact() {
+  const [copied, setCopied] = useState(false)
+
+  function copyEmail() {
+    navigator.clipboard.writeText('kayne.shaw@epitech.eu')
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
     <main className="contact">
-      <p className="contact-intro">
-        Want to talk about a work-study position or a project? Send me a message below,
-        or email me at <a href="mailto:kayne.shaw@epitech.eu">kayne.shaw@epitech.eu</a>.
-      </p>
+      <div className="contact-grid">
+        <section className="contact-info">
+          <h1>Get in touch<span className="dot-accent">.</span></h1>
+          <p className="contact-intro">Send me a message with the form, or reach me directly.</p>
 
-      <div className="terminal-window">
-        <div className="terminal-titlebar" aria-hidden="true">
-          <span>▣</span>
-          <span>CONTACT FORM</span>
-          <span className="terminal-controls">— □ ✕</span>
-        </div>
+          <ul className="info-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+              <a href="mailto:kayne.shaw@epitech.eu">kayne.shaw@epitech.eu</a>
+              <button className="copy-btn" type="button" onClick={copyEmail}>
+                {copied ? 'Copied ✓' : 'Copy'}
+              </button>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" />
+                <circle cx="12" cy="9.5" r="2.5" />
+              </svg>
+              <span>Marseille, France</span>
+            </li>
+          </ul>
 
-        <div className="terminal-content">
-          <p className="terminal-command">PS C:\Contact&gt; contact --new-message</p>
+          <div className="socials">
+            <a className="btn btn-primary" href="https://github.com/KayneCloud" target="_blank" rel="noreferrer">
+              <img src={DEVICON + 'github/github-original.svg'} alt="" />
+              GitHub<span className="arrow" aria-hidden="true">→</span>
+            </a>
+            <a className="btn btn-primary" href="https://www.linkedin.com/in/kayne-shaw-3bb96635a/" target="_blank" rel="noreferrer">
+              <img src={DEVICON + 'linkedin/linkedin-original.svg'} alt="" />
+              LinkedIn<span className="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
 
-          <form className="terminal-form" action="https://api.web3forms.com/submit" method="post">
-            <input type="hidden" name="access_key" value="53f51a52-8c60-41ca-8c8d-65be3cfa2619" />
-            <input type="hidden" name="subject" value="New message from my portfolio" />
-
-            <div className="terminal-field name-step">
-              <label htmlFor="name">PS C:\Contact&gt; Enter-your-name:<span className="terminal-cursor" aria-hidden="true">_</span></label>
-              <input id="name" name="name" type="text" autoComplete="name" placeholder="Your name" required />
-            </div>
-
-            <div className="terminal-field email-step">
-              <label htmlFor="email">PS C:\Contact&gt; Enter-your-email:<span className="terminal-cursor" aria-hidden="true">_</span></label>
-              <input id="email" name="email" type="email" autoComplete="email" placeholder="your.email@example.com" required />
-            </div>
-
-            <div className="terminal-field message-step">
-              <label htmlFor="message">PS C:\Contact&gt; Enter-your-message:<span className="terminal-cursor" aria-hidden="true">_</span></label>
-              <textarea id="message" name="message" rows="3" placeholder="Write your message" required></textarea>
-            </div>
-
-            <div className="confirmation-step">
-              <p className="terminal-confirmation">PS C:\Contact&gt; Message ready. Send it? [Y/N]:</p>
-              <div className="terminal-confirm-buttons">
-                <button className="terminal-submit" type="submit" aria-label="Yes, send the message">Y</button>
-                <button className="terminal-cancel" type="reset" aria-label="No, clear the form">N</button>
-              </div>
-            </div>
-
-            <p className="terminal-response">PS C:\Contact&gt; Waiting for input...</p>
-          </form>
-        </div>
+        <ContactTerminal />
       </div>
     </main>
   )
