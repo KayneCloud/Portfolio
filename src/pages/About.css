@@ -38,7 +38,7 @@
     border-radius: 1.25rem;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
     overflow: hidden;
-    padding: 2.25rem 2.5rem;
+    padding: 1.75rem 2rem;
     position: relative;
 }
 
@@ -47,7 +47,7 @@
     background: linear-gradient(90deg, transparent, #CCD0CF, transparent);
     content: "";
     height: 2px;
-    left: 2.5rem;
+    left: 2rem;
     opacity: 0.6;
     position: absolute;
     right: 2.5rem;
@@ -92,16 +92,15 @@
 
 .school h1 {
     color: #CCD0CF;
-    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
     letter-spacing: -0.02em;
-    line-height: 1.05;
-    margin: 1.25rem 0 1rem;
-    max-width: 20ch;
+    line-height: 1.1;
+    margin: 0.75rem 0;
     text-transform: uppercase;
 }
 
 .school-desc {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.6;
     max-width: 60ch;
 }
@@ -110,7 +109,7 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 2fr;
-    margin-top: 2rem;
+    margin-top: 1.25rem;
     position: relative;
     z-index: 1;
 }
@@ -119,7 +118,7 @@
     background-color: rgba(6, 20, 27, 0.6);
     border: 1px solid #253745;
     border-radius: 0.875rem;
-    padding: 1rem 1.25rem;
+    padding: 0.75rem 1rem;
 }
 
 .phase.now {

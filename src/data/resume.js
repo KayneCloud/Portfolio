@@ -3,8 +3,15 @@ export const education = [
     id: 1,
     date: "2026 - 2029",
     title: "Master of Science: Cloud & Cybersecurity - Epitech Marseille",
-    description: "Leads to a Masters or a RNCP Level 7 title of Information Systems (IS) Architect. The programme trains Cloud experts able to deploy, store and manage data on servers in external data centres, while keeping operational costs under control.",
-    items: [
+    description: [
+      "Leads to a ",
+      { bold: "Masters"},
+      " or a ",
+      { link: "RNCP Level 7", url: "https://www.francecompetences.fr/recherche/rncp/42634/" },
+      " title ",
+      { bold: "Information Systems (IS) Architect" },
+      ". The programme trains Cloud experts able to deploy, store and manage data on servers in external data centres, while keeping operational costs under control.",
+    ],    items: [
       "Server infrastructure tools: operating systems, virtualisation, orchestration, load balancing",
       "Network infrastructure administration",
       "Designing and building Cloud applications and services",
