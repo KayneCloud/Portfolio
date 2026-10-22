@@ -3,7 +3,14 @@ export const education = [
     id: 1,
     date: "2026 - 2029",
     title: "Master of Science: Cloud & Cybersecurity - Epitech Marseille",
-    description: "3-year programme: First year of intensive learning, covering developement, system and algorithm fundamentals, followed by two years of specialisation in Cloud computing and Cybersecurity.",
+    description: "Leads to a Masters or a RNCP Level 7 title of Information Systems (IS) Architect. The programme trains Cloud experts able to deploy, store and manage data on servers in external data centres, while keeping operational costs under control.",
+    items: [
+      "Server infrastructure tools: operating systems, virtualisation, orchestration, load balancing",
+      "Network infrastructure administration",
+      "Designing and building Cloud applications and services",
+      "Building, monitoring and maintaining private or public Clouds",
+      "Budgeting a solution and optimising its costs",
+    ],
   },
   {
     id: 2,
@@ -137,3 +144,26 @@ export const stackGroups = [
     ],
   },
 ]
+
+export const school = {
+  name: "Epitech Marseille",
+  years: "2026 - 2029",
+  title: "Master of Science: Cloud & Cybersecurity",
+  description: "A 3-year programme: a first year of intensive learning covering development, systems and algorithm fundamentals, followed by two years of specialisation in Cloud computing and Cybersecurity.",
+  phases: [
+    {
+      id: 1,
+      years: "Year 1 · 2026 - 2027",
+      title: "Pre-Master of Science",
+      text: "Developement, systems and algorithm fundamentals.",
+      current: true,
+    },
+    {
+      id: 2,
+      years: "Year 2 - 3 · 2027 - 2029",
+      title: "MSc Cloud & Cybersecurity",
+      text: "Specialisation in Cloud computing and Cybersecurity.",
+      current: false,
+    },
+  ]
+}
