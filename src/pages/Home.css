@@ -449,6 +449,6 @@
     }
 
     .photo {
-        min(34rem, 40vw, 64vh);
+        width: min(34rem, 40vw, 64vh);
     }
 }
