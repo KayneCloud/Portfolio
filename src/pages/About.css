@@ -100,9 +100,9 @@
 }
 
 .school-desc {
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.6;
-    max-width: 60ch;
+    max-width: relative;
 }
 
 .school-track {

@@ -6,9 +6,9 @@ export const education = [
     description: [
       "Leads to a ",
       { bold: "Masters"},
-      " or a ",
+      " title or a ",
       { link: "RNCP Level 7", url: "https://www.francecompetences.fr/recherche/rncp/42634/" },
-      " title ",
+      " title of ",
       { bold: "Information Systems (IS) Architect" },
       ". The programme trains Cloud experts able to deploy, store and manage data on servers in external data centres, while keeping operational costs under control.",
     ],    items: [
