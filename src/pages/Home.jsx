@@ -30,6 +30,12 @@ function Home() {
             className="photo"
             alt="Photo of Kayne Shaw"
           />
+          <svg width="0" height="0" className="feather-svg" aria-hidden="true">
+            <filter id="feather">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="soft" />
+              <feComposite in="SourceGraphic" in2="soft" operator="in" />
+            </filter>
+          </svg>
         </div>
       </section>
 

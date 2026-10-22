@@ -112,13 +112,6 @@
     position: relative;
 }
 
-.photo-wrap::before {
-    background: radial-gradient(closest-side, rgba(155, 168, 171, 0.18), transparent);
-    content: "";
-    inset: 0 10%;
-    position: absolute;
-}
-
 .photo {
     aspect-ratio: 1247 / 979;
     display: block;
@@ -127,8 +120,14 @@
     object-fit: contain;
     position: relative;
     width: min(34rem, 40vw, 66vh);
+    filter: brightness(85%);
+    opacity: 0.8;
+    filter: url(#feather);
 }
 
+.feather-svg {
+    position: absolute;
+}
 /*Bottom panel*/
 
 .strip {
