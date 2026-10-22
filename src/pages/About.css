@@ -318,6 +318,21 @@
     content: "▪ ";
 }
 
+.entry-text a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.entry-text a:hover,
+.entry-text a:focus {
+    color: #FFFFFF;
+}
+
+.entry-text strong {
+    color: #CCD0CF;
+}
+
 /*What I learned*/
 
 .learning-item {
