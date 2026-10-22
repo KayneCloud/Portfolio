@@ -36,13 +36,18 @@ function Home() {
       <section className="strip">
         <div className="col">
           <h2>Certifications<span className="dot-accent">.</span></h2>
-          {certifications.map((cert) => (
+                    {certifications.map((cert) => (
             <div key={cert.id} className={`cert ${cert.planned ? 'planned' : ''}`}>
               <img src={cert.logo ? DEVICON + cert.logo : AWS_LOGO} alt="" />
               <div>
                 <strong>{cert.name}</strong>
                 <small><span className="status-dot"></span>{cert.status}</small>
               </div>
+              {cert.credential && (
+                <a className="cert-link" href={cert.credential} target="_blank" rel="noreferrer">
+                  View credential<span aria-hidden="true"> ↗</span>
+                </a>
+              )}
             </div>
           ))}
         </div>
@@ -54,12 +59,22 @@ function Home() {
               <div key={group.id} className="group">
                 <h3>{group.title}</h3>
                 <ul className="chips">
-                  {group.tools.map((tool) => (
-                    <li key={tool.name} className="chip">
-                      <img src={tool.icon} alt="" className={tool.filter} />
-                      {tool.name}
-                    </li>
-                  ))}
+                  {group.tools.map((tool) =>
+                    tool.url ? (
+                      <li key={tool.name}>
+                        <a className="chip chip-link" href={tool.url} target="_blank" rel="noreferrer">
+                          <img src={tool.icon} alt="" className={tool.filter} />
+                          {tool.name}
+                          <span className="chip-arrow" aria-hidden="true">↗</span>
+                        </a>
+                      </li>
+                    ) : (
+                      <li key={tool.name} className="chip">
+                        <img src={tool.icon} alt="" className={tool.filter} />
+                        {tool.name}
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             ))}

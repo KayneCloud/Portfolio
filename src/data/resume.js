@@ -94,6 +94,7 @@ export const certifications = [
     name: "AWS Cloud Practitioner - Foundational",
     status: "Certified · 08/2026",
     planned: false,
+    credential: "https://www.credly.com/badges/bc638a60-9317-44ab-affa-7697cb8c044b",
   },
   {
     id: 2,
@@ -119,7 +120,7 @@ export const stackGroups = [
     tools: [
       {name: "AWS", icon: DEVICON + "amazonwebservices/amazonwebservices-plain-wordmark.svg"},
       {name: "Git", icon: DEVICON + "git/git-original.svg" },
-      { name: "GitHub", icon: DEVICON + "github/github-original.svg", filter: "invert" },
+      { name: "GitHub", icon: DEVICON + "github/github-original.svg", filter: "invert", url: "https://github.com/KayneCloud" },
       { name: "PowerShell", icon: DEVICON + "powershell/powershell-original.svg" },
     ],
   },
