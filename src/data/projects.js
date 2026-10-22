@@ -27,6 +27,7 @@ export const projectList = [
     objective: "Build a video-game using Java",
     technologies: [
       { name: "Java", icon: DEVICON + "java/java-original.svg" },
+      { name: "OOP" },
     ],
     skills: ["", "", ""],
     links: [

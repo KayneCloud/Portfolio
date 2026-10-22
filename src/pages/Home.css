@@ -113,22 +113,20 @@
 }
 
 .photo-wrap::before {
-    background: radial-gradient(closest-side, rgba(155, 168, 171, 0.35), rgba(74, 92, 106, 0.3) 45%, transparent 100%);
+    background: radial-gradient(closest-side, rgba(155, 168, 171, 0.18), transparent);
     content: "";
-    inset: -20% -45%;
+    inset: 0 10%;
     position: absolute;
 }
 
 .photo {
-    aspect-ratio: 1160 / 1356;
-    border: 3px solid #253745;
-    border-radius: 1.5rem;
+    aspect-ratio: 1247 / 979;
     display: block;
     -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
     mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
-    object-fit: cover;
+    object-fit: contain;
     position: relative;
-    width: min(18.25rem, 26vw);
+    width: min(34rem, 40vw, 66vh);
 }
 
 /*Bottom panel*/
@@ -303,7 +301,7 @@
     }
 
     .photo {
-        width: 10.75rem;
+        width: 13rem;
     }
 
     .tagline {
@@ -333,6 +331,26 @@
 
     .stack-groups {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*Computers: the photo sits at the bottom of the hero and slides behind the panel*/
+
+@media (min-width: 861px) {
+    .photo-wrap {
+        align-self: end;
+        margin-bottom: -3.5rem;
+    }
+
+    .photo {
+        border-radius: 1.5rem 1.5rem 0 0;
+        -webkit-mask-image: linear-gradient(to bottom, #000 75%, transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 75%, transparent 100%);
+    }
+
+    .strip {
+        position: relative;
+        z-index: 1;
     }
 }
 
@@ -370,7 +388,7 @@
     }
 
     .photo {
-        width: min(18.25rem, 26vw, 42vh);
+        width: min(34rem, 40vw, 72vh);
     }
 
     .strip {
@@ -431,6 +449,6 @@
     }
 
     .photo {
-        width: min(18.25rem, 26vw, 38vh);
+        min(34rem, 40vw, 64vh);
     }
 }
