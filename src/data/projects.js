@@ -16,7 +16,8 @@ export const projectList = [
       { name: "REST API" },
     ],
     skills: ["API design", "Database modelling", "Teamwork"],
-    links: [
+        links: [
+      { label: "Live demo", url: "https://chefs-dev.vercel.app" },
       { label: "Source code", url: "https://github.com/KayneCloud/Job_Board" },
     ],
   },

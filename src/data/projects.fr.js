@@ -11,7 +11,7 @@ export const projectList = [
     description: "Un site qui met en relation entreprises et chercheurs d'emploi : les entreprises publient des offres, et les candidats les consultent et postulent en ligne. Je l'ai réalisé en binôme dans le cadre d'un projet d'équipe Epitech. J'étais chargé du back-end, la partie invisible du site qui enregistre les offres et les candidatures dans une base de données et envoie les bonnes informations aux pages, tandis que mon binôme a réalisé les pages que les utilisateurs voient et utilisent. Ce projet m'a appris à concevoir une base de données et à me mettre d'accord sur des règles claires avec un coéquipier pour que les deux parties fonctionnent ensemble.",
     role: "J'ai réalisé le back-end et la base de données ; mon binôme a réalisé le front-end en React.",
     skills: ["Conception d'API", "Modélisation de base de données", "Travail en équipe"],
-    links: [{ label: "Code source", url: en[0].links[0].url }],
+    links: [{ label: "Demo Live", url: "https://chefs-dev.vercel.app" },{ label: "Code source", url: en[0].links[0].url }],
   },
   {
     ...en[1],
