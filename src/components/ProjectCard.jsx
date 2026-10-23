@@ -61,8 +61,7 @@ function ProjectCard(props) {
             <a key={link.url} className="repo-link" href={link.url} target="_blank" rel="noopener noreferrer">
               {link.url.includes('github.com') && <img src={GITHUB_ICON} alt="" />}
               {link.label}
-              <span className="arrow" aria-hidden="true">↗</span>
-            </a>
+              <span className="arrow" aria-hidden="true">→</span>            </a>
           ))}
         </div>
       )}

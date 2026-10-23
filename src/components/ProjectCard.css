@@ -187,6 +187,7 @@
 }
 
 .repo-link .arrow {
+    display: inline-block;
     transition: transform 0.2s ease;
 }
 
@@ -203,7 +204,7 @@
 
 .repo-link:hover .arrow,
 .repo-link:focus .arrow {
-    transform: translate(2px, -2px);
+    transform: translateX(0.25rem);
 }
 
 /*Phones: one column*/

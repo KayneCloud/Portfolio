@@ -14,6 +14,7 @@ const TEXT = {
     taglineEnd: ' from January 2027.',
     connect: "Let's connect",
     cv: 'Download my CV',
+    cvFile: 'CV_Kayne_Shaw_Cloud_EN.pdf',
     photo: 'Photo of Kayne Shaw',
     credential: 'View credential',
   },
@@ -24,6 +25,7 @@ const TEXT = {
     taglineEnd: ' à partir de janvier 2027.',
     connect: 'Me contacter',
     cv: 'Télécharger mon CV',
+    cvFile: 'CV_Kayne_Shaw_Cloud_FR.pdf',
     photo: 'Photo de Kayne Shaw',
     credential: 'Voir le certificat',
   },
@@ -46,8 +48,7 @@ function Home({ lang }) {
             <Link to="/contact" className="btn btn-primary">
               {t.connect}<span className="arrow">→</span>
             </Link>
-            <a href={import.meta.env.BASE_URL + 'CV_Kayne_Shaw_Cloud_EN.pdf'} className="btn btn-secondary" download>
-              {t.cv}
+            <a href={import.meta.env.BASE_URL + t.cvFile} className="btn btn-secondary" download>              {t.cv}
             </a>
           </div>
         </div>
