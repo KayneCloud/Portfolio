@@ -99,38 +99,3 @@
     padding: 0.25rem 0.75rem;
     background-color: #253745;
 }
-
-/*Used by ContactCard (not shown on any page at the moment)*/
-
-.card-title {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-}
-
-.card-icon {
-    flex-shrink: 0;
-    height: 3.25rem;
-    object-fit: contain;
-    width: 3.25rem;
-}
-
-.contact-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    list-style: none;
-    margin: 1rem 0 1.5rem 0;
-}
-
-.card a {
-    color: #CCD0CF;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.card a:hover,
-.card a:focus {
-    color: #9BA8AB;
-    text-decoration: underline;
-}

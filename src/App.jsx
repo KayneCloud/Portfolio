@@ -26,6 +26,8 @@ function App() {
         <Route path="/resume" element={<About lang={lang} />} />
         <Route path="/projects" element={<Projects lang={lang} />} />
         <Route path="/contact" element={<Contact lang={lang} />} />
+        {/* any other address (a typo, an old link) shows the Home page */}
+        <Route path="*" element={<Home lang={lang} />} />
       </Routes>
       <Footer lang={lang} />
     </>
