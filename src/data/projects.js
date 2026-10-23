@@ -32,7 +32,7 @@ export const projectList = [
       { name: "Java", icon: DEVICON + "java/java-original.svg" },
       { name: "OOP" },
     ],
-    skills: ["", "", ""],
+    skills: ["Object-oriented programming", "Teamwork", "Game logic"],
     links: [
       { label: "No source code yet", url: "" },
     ],

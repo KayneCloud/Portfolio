@@ -19,6 +19,7 @@ export const projectList = [
     date: "En cours",
     context: "Projet d'équipe Epitech : créer un jeu 2D en Java.",
     description: "Un jeu vidéo en 2D que je développe actuellement en Java dans le cadre d'un projet d'équipe Epitech. C'est mon premier projet en Java, un langage que j'ai commencé à apprendre en octobre 2026, et il m'aide à apprendre la programmation orientée objet : organiser un programme en blocs réutilisables qui gèrent chacun une partie du jeu.",
+    skills: ["Programmation orientée objet", "Travail en équipe", "Logique de jeu"],
     links: en[1].links.map((link) => ({ ...link, label: "Pas encore de code source" })),
   },
   {

@@ -26,7 +26,7 @@ export const education = [
   },
   {
     id: 2,
-    date: "2023",
+    date: "2023 - 2026",
     title: "Licence STAPS - Avignon Université",
     description: "Étude des sciences biologiques du sport et de leurs applications dans la vie quotidienne et en éducation physique.",
   },

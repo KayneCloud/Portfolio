@@ -21,7 +21,7 @@ export const education = [
   },
   {
     id: 2,
-    date: "2023",
+    date: "2023 - 2026",
     title: "Undergraduate in Sports Science - Avignon University",
     description: "Study of the biological sciences of sport and their applications to everyday life and physical education."
   },
