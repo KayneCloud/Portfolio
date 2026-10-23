@@ -120,9 +120,8 @@
     object-fit: contain;
     position: relative;
     width: min(34rem, 40vw, 66vh);
-    filter: brightness(85%);
-    opacity: 0.8;
-    filter: url(#feather);
+    filter: brightness(100%) url(#feather);
+    opacity: 0.85;
 }
 
 .feather-svg {
@@ -197,11 +196,18 @@
     color: #CCD0CF;
     flex-shrink: 0;
     font-size: 0.5rem;
-    margin-left: auto;
     padding: 0.25rem 0.5rem;
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
     white-space: nowrap;
+}
+
+.cert-status {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.125rem;
 }
 
 .cert-link:hover,
@@ -295,12 +301,34 @@
         text-align: center;
     }
 
+        /*the photo sits inside an arch-shaped frame*/
     .photo-wrap {
+        aspect-ratio: 4 / 4.6;
+        background: radial-gradient(120% 90% at 50% 100%, rgba(37, 55, 69, 0.6), rgba(17, 33, 45, 0.35) 70%);
+        border: 1px solid #4A5C6A;
+        border-radius: 999px 999px 1.25rem 1.25rem;
         grid-row: 1;
+        overflow: hidden;
+        width: min(16rem, 74vw);
+    }
+
+    /*thin dashed line inside the arch*/
+    .photo-wrap::before {
+        border: 1px dashed rgba(204, 208, 207, 0.15);
+        border-radius: inherit;
+        content: "";
+        inset: 8%;
+        position: absolute;
     }
 
     .photo {
-        width: 13rem;
+        bottom: 0;
+        left: 50%;
+        -webkit-mask-image: none;
+        mask-image: none;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 125%;
     }
 
     .tagline {

@@ -19,8 +19,7 @@ function Home() {
             <Link to="/contact" className="btn btn-primary">
               Let's connect<span className="arrow">→</span>
             </Link>
-            <a href={import.meta.env.BASE_URL + 'cv-kayne-shaw.pdf'} className="btn btn-secondary" download>
-              Download my CV
+            <a href={import.meta.env.BASE_URL + 'CV_Kayne_Shaw_Cloud_EN.pdf'} className="btn btn-secondary" download>              Download my CV
             </a>
           </div>
         </div>
@@ -43,17 +42,19 @@ function Home() {
         <div className="col">
           <h2>Certifications<span className="dot-accent">.</span></h2>
                     {certifications.map((cert) => (
-            <div key={cert.id} className={`cert ${cert.planned ? 'planned' : ''}`}>
+                        <div key={cert.id} className={`cert ${cert.planned ? 'planned' : ''}`}>
               <img src={cert.logo ? DEVICON + cert.logo : AWS_LOGO} alt="" />
               <div>
                 <strong>{cert.name}</strong>
-                <small><span className="status-dot"></span>{cert.status}</small>
+                <div className="cert-status">
+                  <small><span className="status-dot"></span>{cert.status}</small>
+                  {cert.credential && (
+                    <a className="cert-link" href={cert.credential} target="_blank" rel="noreferrer">
+                      View credential →
+                    </a>
+                  )}
+                </div>
               </div>
-              {cert.credential && (
-                <a className="cert-link" href={cert.credential} target="_blank" rel="noreferrer">
-                  View credential<span aria-hidden="true"> ↗</span>
-                </a>
-              )}
             </div>
           ))}
         </div>
@@ -71,7 +72,6 @@ function Home() {
                         <a className="chip chip-link" href={tool.url} target="_blank" rel="noreferrer">
                           <img src={tool.icon} alt="" className={tool.filter} />
                           {tool.name}
-                          <span className="chip-arrow" aria-hidden="true">↗</span>
                         </a>
                       </li>
                     ) : (
