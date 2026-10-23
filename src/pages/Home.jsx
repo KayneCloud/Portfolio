@@ -54,9 +54,10 @@ function Home({ lang }) {
         </div>
         <div className="photo-wrap">
           <img
-            src={import.meta.env.BASE_URL + 'assets/pp.png'}
+            src={import.meta.env.BASE_URL + 'assets/pp.webp'}
             className="photo"
             alt={t.photo}
+            fetchPriority="high"
           />
           <svg width="0" height="0" className="feather-svg" aria-hidden="true">
             <filter id="feather">
