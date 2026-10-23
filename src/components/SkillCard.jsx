@@ -12,7 +12,7 @@ function SkillCard(props) {
             <li key={lang.name}>
               <Flag country={lang.flag} />
               <span className="lang-name">{lang.name}</span>
-              <span className={`lang-level ${lang.level === 'Native' ? 'native' : ''}`}>{lang.level}</span>
+              <span className={`lang-level ${['Native', 'Natif'].includes(lang.level) ? 'native' : ''}`}>{lang.level}</span>
             </li>
           ))}
         </ul>

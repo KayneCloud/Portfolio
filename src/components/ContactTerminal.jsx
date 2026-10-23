@@ -4,15 +4,50 @@ import { useEffect, useRef, useState } from 'react'
 const ACCESS_KEY = '53f51a52-8c60-41ca-8c8d-65be3cfa2619'
 const PROMPT = 'PS C:\\Contact> '
 
-// each question, and what the terminal says when the answer is valid
-const STEPS = [
-  { key: 'name', ask: 'Enter-your-name: ', done: (v) => `Name set to '${v}'.` },
-  { key: 'email', ask: 'Enter-your-email: ', done: (v) => `Email address validated: ${v}` },
-  { key: 'message', ask: 'Enter-your-message: ', done: (v) => `Message saved (${v.length} characters).` },
-  { key: 'confirm', ask: 'Send this message? [Y/N]: ' },
-]
+// everything the terminal says, in both languages
+const TEXT = {
+  en: {
+    // each question, and what the terminal says when the answer is valid
+    steps: [
+      { key: 'name', ask: 'Enter-your-name: ', done: (v) => `Name set to '${v}'.` },
+      { key: 'email', ask: 'Enter-your-email: ', done: (v) => `Email address validated: ${v}` },
+      { key: 'message', ask: 'Enter-your-message: ', done: (v) => `Message saved (${v.length} characters).` },
+      { key: 'confirm', ask: 'Send this message? [Y/N]: ' },
+    ],
+    yes: 'Y',
+    hint: 'Type your answer and press Enter.',
+    empty: 'Error: this field cannot be empty.',
+    badEmail: 'Error: please enter a valid email address.',
+    answerYN: 'Please answer Y or N.',
+    sending: 'Sending...',
+    cancelled: 'Message cancelled. Starting again...',
+    sent: (name) => `Message sent. Thank you, ${name}! I will reply soon.`,
+    failed: 'Error: the message could not be sent. Answer Y to try again.',
+    offline: 'Error: no connection. Answer Y to try again.',
+  },
+  fr: {
+    steps: [
+      { key: 'name', ask: 'Entrez-votre-nom : ', done: (v) => `Nom enregistré : '${v}'.` },
+      { key: 'email', ask: 'Entrez-votre-email : ', done: (v) => `Adresse email validée : ${v}` },
+      { key: 'message', ask: 'Entrez-votre-message : ', done: (v) => `Message enregistré (${v.length} caractères).` },
+      { key: 'confirm', ask: 'Envoyer ce message ? [O/N] : ' },
+    ],
+    yes: 'O',
+    hint: 'Tapez votre réponse et appuyez sur Entrée.',
+    empty: 'Erreur : ce champ ne peut pas être vide.',
+    badEmail: 'Erreur : veuillez entrer une adresse email valide.',
+    answerYN: 'Veuillez répondre O ou N.',
+    sending: 'Envoi en cours...',
+    cancelled: 'Message annulé. On recommence...',
+    sent: (name) => `Message envoyé. Merci, ${name} ! Je vous répondrai bientôt.`,
+    failed: "Erreur : le message n'a pas pu être envoyé. Répondez O pour réessayer.",
+    offline: 'Erreur : pas de connexion. Répondez O pour réessayer.',
+  },
+}
 
-function ContactTerminal() {
+function ContactTerminal({ lang }) {
+  const t = TEXT[lang]
+  const STEPS = t.steps
   const [lines, setLines] = useState([])      // everything already printed
   const [step, setStep] = useState(0)         // which question we are on
   const [answers, setAnswers] = useState({})  // { name, email, message }
@@ -53,25 +88,25 @@ function ContactTerminal() {
 
     if (current.key === 'confirm') {
       const choice = answer.toLowerCase()
-      if (choice === 'y') {
-        print(echo, { type: 'dim', text: 'Sending...' })
+      if (choice === 'y' || choice === 'o') {
+        print(echo, { type: 'dim', text: t.sending })
         send()
       } else if (choice === 'n') {
-        print(echo, { type: 'dim', text: 'Message cancelled. Starting again...' }, { type: 'blank' })
+        print(echo, { type: 'dim', text: t.cancelled }, { type: 'blank' })
         setAnswers({})
         setStep(0)
       } else {
-        print(echo, { type: 'error', text: 'Please answer Y or N.' })
+        print(echo, { type: 'error', text: t.answerYN })
       }
       return
     }
 
     if (!answer) {
-      print(echo, { type: 'error', text: 'Error: this field cannot be empty.' })
+      print(echo, { type: 'error', text: t.empty })
       return
     }
     if (current.key === 'email' && !/^\S+@\S+\.\S+$/.test(answer)) {
-      print(echo, { type: 'error', text: 'Error: please enter a valid email address.' })
+      print(echo, { type: 'error', text: t.badEmail })
       return
     }
 
@@ -98,14 +133,14 @@ function ContactTerminal() {
       const result = await response.json()
 
       if (result.success) {
-        print({ type: 'good', text: `Message sent. Thank you, ${answers.name}! I will reply soon.` }, { type: 'blank' })
+        print({ type: 'good', text: t.sent(answers.name) }, { type: 'blank' })
         setAnswers({})
         setStep(STEPS.length)
       } else {
-        print({ type: 'error', text: 'Error: the message could not be sent. Answer Y to try again.' })
+        print({ type: 'error', text: t.failed })
       }
     } catch {
-      print({ type: 'error', text: 'Error: no connection. Answer Y to try again.' })
+      print({ type: 'error', text: t.offline })
     }
     setSending(false)
   }
@@ -139,7 +174,7 @@ function ContactTerminal() {
 
       <div className="term-body" ref={bodyRef} aria-live="polite">
         <p>Kayne Shaw Contact Shell</p>
-        <p className="term-dim">Type your answer and press Enter.</p>
+        <p className="term-dim">{t.hint}</p>
         <p className="term-blank">&nbsp;</p>
 
         {lines.map((line, index) => {
@@ -158,7 +193,7 @@ function ContactTerminal() {
 
             {current?.key === 'confirm' && (
               <span className="term-yn-wrap">
-                <button className="term-yn" type="button" onClick={() => submit('Y')}>Y</button>
+                <button className="term-yn" type="button" onClick={() => submit(t.yes)}>{t.yes}</button>
                 <button className="term-yn" type="button" onClick={() => submit('N')}>N</button>
               </span>
             )}

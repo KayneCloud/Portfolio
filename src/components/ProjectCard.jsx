@@ -4,6 +4,7 @@ const GITHUB_ICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/
 
 function ProjectCard(props) {
   const number = String(props.index + 1).padStart(2, '0')
+  const fr = props.lang === 'fr'
 
   return (
     <article className="project-card" style={{ '--i': props.index }}>
@@ -15,18 +16,18 @@ function ProjectCard(props) {
       <div className="card-body">
         <h2>{props.title}<span className="dot-accent">.</span></h2>
         <div className="card-about">
-          <h3 className="card-label">Project description</h3>
+          <h3 className="card-label">{fr ? 'Description du projet' : 'Project description'}</h3>
           <p className="card-summary">{props.description}</p>
         </div>
         <div className="card-meta">
           <div>
-            <h3>Context</h3>
+            <h3>{fr ? 'Contexte' : 'Context'}</h3>
             <p>{props.context}</p>
           </div>
 
           {props.role && (
             <div>
-              <h3>My role</h3>
+              <h3>{fr ? 'Mon rôle' : 'My role'}</h3>
               <p>{props.role}</p>
             </div>
           )}
@@ -44,7 +45,7 @@ function ProjectCard(props) {
           </div>
 
           <div>
-            <h3>Skills</h3>
+            <h3>{fr ? 'Compétences' : 'Skills'}</h3>
             <p className="skill-list">
               {props.skills.map((skill) => (
                 <span key={skill}>{skill}</span>

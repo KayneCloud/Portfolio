@@ -73,18 +73,28 @@ export const skillCards = [
 export const learning = [
   {
     id: 1,
-    title: "From static pages to React",
-    text: "I started this portfolio in plain HTML and CSS, then rebuilt it with React. I learned to split a page into reusable components and to keep content in data files instead of repeating HTML.",
+    title: "Cloud fundamentals with AWS",
+    text: "Preparing for the AWS Cloud Practitioner certification, which I passed in August 2026, gave me a solid base in core cloud concepts: what cloud services are, how they are billed, and how responsibility for security is shared between the provider and the customer. I am now building on it with the AWS Solutions Architect - Associate.",
   },
   {
     id: 2,
-    title: "Working with Git",
-    text: "I learned to commit regularly, work on a branch, merge it back into main, and fix mistakes like files left out of a commit.",
+    title: "Getting comfortable with Linux",
+    text: "Through the Linux Foundation's Introduction to Linux course (LFS101), I am learning to work from the command line: navigating the file system, managing files and permissions, and understanding how a Linux system is organised — essential skills for working with servers in the cloud.",
   },
   {
     id: 3,
+    title: "Picking up a new language: Java",
+    text: "I had never written Java before October 2026. During Epitech's 10-day Java bootcamp I learned its syntax and the basics of object-oriented programming through daily exercises, automatically graded by a bot on GitHub. It taught me to read instructions carefully and to test my code before submitting it.",
+  },
+  {
+    id: 4,
     title: "Back-end development in a team",
-    text: "On the job board project I was responsible for the Flask API and the MySQL database, which taught me to agree on an API with a teammate working on the front end.",
+    text: "On the job board project I was responsible for the Flask API and the MySQL database, which taught me to agree on an API with a teammate working on the front end. Presenting the project afterwards taught me to explain technical choices clearly and to describe my part of a team project.",
+  },
+  {
+    id: 5,
+    title: "Building and publishing this website",
+    text: "I started this portfolio in plain HTML and CSS, then rebuilt it with React, splitting pages into reusable components and keeping content in data files. I made it work on every screen size and for visitors using screen readers. I manage the code with Git and GitHub, and set up a GitHub Actions workflow that publishes the site on GitHub Pages every time I push new code.",
   },
 ]
 

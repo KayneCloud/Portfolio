@@ -8,7 +8,7 @@
     box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.45);
     overflow: hidden;
     position: sticky;
-    top: calc(var(--first-top, 6.25rem) + var(--i) * 24px);
+    top: var(--top, calc(6.25rem + var(--i) * 24px)); /*--top is set for each card in Projects.jsx*/
     transition: border-color 0.25s ease;
 }
 
@@ -275,10 +275,4 @@
     .repo-link {
         padding: 0.25rem 0.75rem;
     }
-}
-
-/*Screens too short for the tallest card: cards scroll normally (class set in Projects.jsx)*/
-
-.no-stack .project-card {
-    position: static;
 }

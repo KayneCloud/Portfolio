@@ -1,25 +1,53 @@
 import './Home.css'
 import { Link } from 'react-router'
-import { certifications, stackGroups } from '../data/resume'
+import * as resumeEn from '../data/resume'
+import * as resumeFr from '../data/resume.fr'
 
 const DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/'
 const AWS_LOGO = 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg'
 
-function Home() {
+const TEXT = {
+  en: {
+    role: 'Cloud & Cybersecurity Major',
+    taglineStart: '3rd-year Epitech student, looking for an apprenticeship to build ',
+    taglineEm: 'secure cloud infrastructure',
+    taglineEnd: ' from January 2027.',
+    connect: "Let's connect",
+    cv: 'Download my CV',
+    photo: 'Photo of Kayne Shaw',
+    credential: 'View credential',
+  },
+  fr: {
+    role: 'Majeure Cloud & Cybersécurité',
+    taglineStart: 'Étudiant en 3e année à Epitech, je cherche une alternance pour construire des ',
+    taglineEm: 'infrastructures cloud sécurisées',
+    taglineEnd: ' à partir de janvier 2027.',
+    connect: 'Me contacter',
+    cv: 'Télécharger mon CV',
+    photo: 'Photo de Kayne Shaw',
+    credential: 'Voir le certificat',
+  },
+}
+
+function Home({ lang }) {
+  const t = TEXT[lang]
+  const { certifications, stackGroups } = lang === 'fr' ? resumeFr : resumeEn
+
   return (
     <main className="home">
       <section className="hero">
         <div>
           <h1>Kayne Shaw<span className="dot-accent">.</span></h1>
-          <span className="role">Cloud &amp; Cybersecurity Major</span>
+          <span className="role">{t.role}</span>
           <p className="tagline">
-            3rd-year Epitech student, looking for an apprenticeship to build <em>secure cloud infrastructure</em> from January 2027.
+            {t.taglineStart}<em>{t.taglineEm}</em>{t.taglineEnd}
           </p>
           <div className="buttons">
             <Link to="/contact" className="btn btn-primary">
-              Let's connect<span className="arrow">→</span>
+              {t.connect}<span className="arrow">→</span>
             </Link>
-            <a href={import.meta.env.BASE_URL + 'CV_Kayne_Shaw_Cloud_EN.pdf'} className="btn btn-secondary" download>              Download my CV
+            <a href={import.meta.env.BASE_URL + 'CV_Kayne_Shaw_Cloud_EN.pdf'} className="btn btn-secondary" download>
+              {t.cv}
             </a>
           </div>
         </div>
@@ -27,7 +55,7 @@ function Home() {
           <img
             src={import.meta.env.BASE_URL + 'assets/pp.png'}
             className="photo"
-            alt="Photo of Kayne Shaw"
+            alt={t.photo}
           />
           <svg width="0" height="0" className="feather-svg" aria-hidden="true">
             <filter id="feather">
@@ -50,7 +78,7 @@ function Home() {
                   <small><span className="status-dot"></span>{cert.status}</small>
                   {cert.credential && (
                     <a className="cert-link" href={cert.credential} target="_blank" rel="noreferrer">
-                      View credential →
+                      {t.credential} →
                     </a>
                   )}
                 </div>

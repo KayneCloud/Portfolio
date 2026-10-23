@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router'
 import Background from './components/Background'
 import Header from './components/Header'
@@ -8,17 +9,25 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 
 function App() {
+  // the site's language: 'en' or 'fr' (starts in English on every visit)
+  const [lang, setLang] = useState('en')
+
+  // tells the browser (and screen readers) which language the page is in
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
+
   return (
     <>
       <Background />
-      <Header />
+      <Header lang={lang} setLang={setLang} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/resume" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home lang={lang} />} />
+        <Route path="/resume" element={<About lang={lang} />} />
+        <Route path="/projects" element={<Projects lang={lang} />} />
+        <Route path="/contact" element={<Contact lang={lang} />} />
       </Routes>
-      <Footer />
+      <Footer lang={lang} />
     </>
   )
 }

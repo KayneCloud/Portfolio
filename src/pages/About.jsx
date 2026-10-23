@@ -1,9 +1,13 @@
 import './About.css'
 import TimelineEntry from '../components/TimelineEntry'
 import SkillCard from '../components/SkillCard'
-import { school, education, otherExperience, learning, skillCards } from '../data/resume'
+import * as resumeEn from '../data/resume'
+import * as resumeFr from '../data/resume.fr'
 
-function About() {
+function About({ lang }) {
+  const fr = lang === 'fr'
+  const { school, education, otherExperience, learning, skillCards } = fr ? resumeFr : resumeEn
+
   // one list for the whole timeline, so left / right keeps alternating across both sections
   const sideOf = (index) => (index % 2 === 0 ? 'right' : 'left')
 
@@ -24,7 +28,7 @@ function About() {
             <div key={phase.id} className={`phase ${phase.current ? 'now' : ''}`}>
               <div className="phase-head">
                 <span className="phase-years">{phase.years}</span>
-                {phase.current && <span className="now-tag">Now</span>}
+                {phase.current && <span className="now-tag">{fr ? 'En cours' : 'Now'}</span>}
               </div>
               <h2>{phase.title}</h2>
               <p>{phase.text}</p>
@@ -35,12 +39,12 @@ function About() {
 
       {/* one continuous timeline */}
       <div className="timeline">
-        <h2 className="line-title">Education<span className="dot-accent">.</span></h2>
+        <h2 className="line-title">{fr ? 'Formation' : 'Education'}<span className="dot-accent">.</span></h2>
         {education.map((entry, index) => (
           <TimelineEntry key={entry.id} side={sideOf(index)} {...entry} />
         ))}
 
-        <h2 className="line-title">Professional Experiences<span className="dot-accent">.</span></h2>
+        <h2 className="line-title">{fr ? 'Expériences professionnelles' : 'Professional Experiences'}<span className="dot-accent">.</span></h2>
         {otherExperience.map((entry, index) => (
           <TimelineEntry key={entry.id} side={sideOf(education.length + index)} {...entry} />
         ))}
@@ -60,7 +64,7 @@ function About() {
       </section>
 
       <section className="learning">
-        <h2>What I learned this year<span className="dot-accent">.</span></h2>
+        <h2>{fr ? "Ce que j'ai appris cette année" : 'What I learned this year'}<span className="dot-accent">.</span></h2>
         {learning.map((item) => (
           <article key={item.id} className="learning-item">
             <h3>{item.title}</h3>
@@ -72,4 +76,4 @@ function About() {
   )
 }
 
-export default About
+export default About

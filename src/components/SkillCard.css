@@ -97,11 +97,7 @@
     font-size: 0.75rem;
     margin-left: auto;
     padding: 0.25rem 0.75rem;
-}
-
-.lang-level.native {
     background-color: #253745;
-    color: #CCD0CF;
 }
 
 /*Used by ContactCard (not shown on any page at the moment)*/

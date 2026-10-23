@@ -1,9 +1,9 @@
 import './Footer.css'
 
-function Footer() {
+function Footer({ lang }) {
   return (
     <footer className="site-footer">
-      <p>© 2026 Kayne Shaw. Built with React.</p>
+      <p>© 2026 Kayne Shaw. {lang === 'fr' ? 'Réalisé avec React.' : 'Built with React.'}</p>
     </footer>
   )
 }

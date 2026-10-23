@@ -4,7 +4,8 @@ import ContactTerminal from '../components/ContactTerminal'
 
 const DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/'
 
-function Contact() {
+function Contact({ lang }) {
+  const fr = lang === 'fr'
   const [copied, setCopied] = useState(false)
 
   function copyEmail() {
@@ -17,8 +18,10 @@ function Contact() {
     <main className="contact">
       <div className="contact-grid">
         <section className="contact-info">
-          <h1>Get in touch<span className="dot-accent">.</span></h1>
-          <p className="contact-intro">Send me a message with the form, or reach me directly.</p>
+          <h1>{fr ? 'Contactez-moi' : 'Get in touch'}<span className="dot-accent">.</span></h1>
+          <p className="contact-intro">
+            {fr ? 'Envoyez-moi un message avec le formulaire, ou contactez-moi directement.' : 'Send me a message with the form, or reach me directly.'}
+          </p>
 
           <ul className="info-list">
             <li>
@@ -28,7 +31,7 @@ function Contact() {
               </svg>
               <a href="mailto:kayne.shaw@epitech.eu">kayne.shaw@epitech.eu</a>
               <button className="copy-btn" type="button" onClick={copyEmail}>
-                {copied ? 'Copied ✓' : 'Copy'}
+                {copied ? (fr ? 'Copié ✓' : 'Copied ✓') : (fr ? 'Copier' : 'Copy')}
               </button>
             </li>
             <li>
@@ -52,10 +55,11 @@ function Contact() {
           </div>
         </section>
 
-        <ContactTerminal />
+        {/* key={lang} restarts the terminal when the language changes */}
+        <ContactTerminal lang={lang} key={lang} />
       </div>
     </main>
   )
 }
 
-export default Contact
+export default Contact

@@ -64,9 +64,27 @@
     color: #CCD0CF;
 }
 
-.nav .cv {
-    color: #CCD0CF;
-    font-weight: bold;
+/*Language button: shows the flag of the language the site is in now*/
+.lang-toggle {
+    align-items: center;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+}
+
+.lang-toggle .flag {
+    border-radius: 0.1875rem;
+    box-shadow: 0 0 0 1px #4A5C6A;
+    display: block;
+    height: 1rem;
+    transition: transform 0.2s ease;
+    width: 1.5rem;
+}
+
+.lang-toggle:hover .flag,
+.lang-toggle:focus .flag {
+    transform: scale(1.1);
 }
 
 @media (max-width: 860px) {
@@ -74,12 +92,25 @@
         gap: 0;
     }
 
-    .nav .link {
-        font-size: 0.75rem;
-        padding: 1rem 0.5rem;
+    .nav {
+        padding: 0.5rem 0.25rem 0.5rem 0.75rem;
     }
 
-    .hide-sm {
-        display: none;
+    .nav .link {
+        font-size: 0.75rem;
+        padding: 1rem 0.375rem;
+    }
+}
+
+/*Very small phones: a bit tighter so the flag still fits*/
+@media (max-width: 360px) {
+    .site-header {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .nav .link {
+        font-size: 0.6875rem;
+        padding: 1rem 0.3rem;
     }
 }
