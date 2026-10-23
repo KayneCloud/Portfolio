@@ -67,10 +67,23 @@
 
 .card-summary {
     color: #CCD0CF;
-    font-size: 1.125rem;
+    font-size: 0.9375rem;
     line-height: 1.5;
-    margin-top: 0.75rem;
+    margin-top: 0;
     max-width: 40rem;
+}
+
+.card-about {
+    margin-top: 0.75rem;
+}
+
+.card-label {
+    color: #9BA8AB;
+    font-size: 0.75rem;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
 }
 
 .card-meta {
@@ -236,8 +249,11 @@
         font-size: 1.25rem;
     }
 
-    .card-summary {
-        font-size: 1rem;
+        .card-summary {
+        font-size: 0.875rem;
+    }
+
+    .card-about {
         margin-top: 0.5rem;
     }
 

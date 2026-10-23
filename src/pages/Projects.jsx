@@ -83,6 +83,7 @@ function Projects() {
             technologies={project.technologies}
             skills={project.skills}
             links={project.links}
+            description={project.description}
           />
         ))}
       </div>

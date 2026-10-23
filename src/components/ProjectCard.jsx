@@ -14,8 +14,10 @@ function ProjectCard(props) {
 
       <div className="card-body">
         <h2>{props.title}<span className="dot-accent">.</span></h2>
-        <p className="card-summary">{props.objective}</p>
-
+        <div className="card-about">
+          <h3 className="card-label">Project description</h3>
+          <p className="card-summary">{props.description}</p>
+        </div>
         <div className="card-meta">
           <div>
             <h3>Context</h3>
