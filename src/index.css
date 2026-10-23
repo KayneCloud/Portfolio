@@ -50,3 +50,27 @@ main {
 .dot-accent {
     color: #4A5C6A;
 }
+
+/*Each page fades in when it appears*/
+
+main {
+    animation: page-fade 0.3s ease both;
+}
+
+@keyframes page-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*No fade for visitors who turned animations off*/
+
+@media (prefers-reduced-motion: reduce) {
+    main {
+        animation: none;
+    }
+}
