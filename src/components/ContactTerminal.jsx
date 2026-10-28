@@ -9,7 +9,7 @@ const TEXT = {
   en: {
     // each question, and what the terminal says when the answer is valid
     steps: [
-      { key: 'name', ask: 'Enter-your-name: ', done: (v) => `Name set to '${v}'.` },
+      { key: 'name', ask: 'Enter-your-full-name: ', done: (v) => `Name set to '${v}'.` },
       { key: 'email', ask: 'Enter-your-email: ', done: (v) => `Email address validated: ${v}` },
       { key: 'message', ask: 'Enter-your-message: ', done: (v) => `Message saved (${v.length} characters).` },
       { key: 'confirm', ask: 'Send this message? [Y/N]: ' },
@@ -27,7 +27,7 @@ const TEXT = {
   },
   fr: {
     steps: [
-      { key: 'name', ask: 'Entrez-votre-nom : ', done: (v) => `Nom enregistré : '${v}'.` },
+      { key: 'name', ask: 'Entrez-votre-nom-et-prénom : ', done: (v) => `Nom enregistré : '${v}'.` },
       { key: 'email', ask: 'Entrez-votre-email : ', done: (v) => `Adresse email validée : ${v}` },
       { key: 'message', ask: 'Entrez-votre-message : ', done: (v) => `Message enregistré (${v.length} caractères).` },
       { key: 'confirm', ask: 'Envoyer ce message ? [O/N] : ' },
