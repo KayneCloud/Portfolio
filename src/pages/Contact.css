@@ -1,4 +1,4 @@
-/*Layout: info on the left, form on the right*/
+/*Contact details on the left, terminal on the right*/
 
 .contact-grid {
     align-items: start;
@@ -21,7 +21,7 @@
     margin: 1rem 0 1.5rem;
 }
 
-/*Email + location lines*/
+/*Email and location lines*/
 
 .info-list {
     display: grid;
@@ -70,7 +70,7 @@
     color: #06141B;
 }
 
-/*GitHub + LinkedIn buttons (look comes from .btn-primary in Home.css)*/
+/*GitHub and LinkedIn buttons*/
 
 .socials {
     display: flex;

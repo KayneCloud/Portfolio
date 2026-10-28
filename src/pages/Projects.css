@@ -1,10 +1,10 @@
-/*The page's own bottom padding would add extra scroll after the stack, so it's removed*/
+/*No bottom padding, so the page ends with the last card*/
 
 .projects {
     padding-bottom: 0;
 }
 
-/*Stacking cards*/
+/*Column of stacking cards*/
 
 .project-grid {
     display: flex;

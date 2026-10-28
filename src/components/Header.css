@@ -1,4 +1,4 @@
-/*Floating pill navbar that follows the scroll*/
+/*Navigation bar that stays at the top when scrolling*/
 
 .site-header {
     padding: 1rem 1.5rem 0;
@@ -64,7 +64,7 @@
     color: #CCD0CF;
 }
 
-/*Language button: shows the flag of the language the site is in now*/
+/*Flag button that switches the language*/
 .lang-toggle {
     align-items: center;
     background: none;
@@ -102,7 +102,7 @@
     }
 }
 
-/*Very small phones: a bit tighter so the flag still fits*/
+/*Very small phones: tighter links so the flag still fits*/
 @media (max-width: 360px) {
     .site-header {
         padding-left: 0.75rem;

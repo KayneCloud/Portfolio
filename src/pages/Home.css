@@ -1,4 +1,4 @@
-/*Page: fills the screen between header and footer*/
+/*Page fills the screen between header and footer*/
 
 .home {
     display: flex;
@@ -11,7 +11,7 @@
     overflow-x: clip;
 }
 
-/*Hero*/
+/*Top part: name, role, tagline, buttons and photo*/
 
 .hero {
     align-items: center;
@@ -105,7 +105,7 @@
     border-color: #CCD0CF;
 }
 
-/*Photo with glow behind it*/
+/*Profile photo*/
 
 .photo-wrap {
     justify-self: center;
@@ -127,7 +127,7 @@
 .feather-svg {
     position: absolute;
 }
-/*Bottom panel*/
+/*Bottom panel with certifications and stack*/
 
 .strip {
     backdrop-filter: blur(10px);
@@ -221,7 +221,7 @@
     border: 1px solid #9BA8AB;
 }
 
-/*Stack*/
+/*Stack chips with logos*/
 
 .stack-groups {
     display: grid;
@@ -292,7 +292,7 @@
     filter: brightness(1.9);
 }
 
-/*Mobile*/
+/*Phones: everything in one column*/
 
 @media (max-width: 860px) {
     .hero {
@@ -301,7 +301,7 @@
         text-align: center;
     }
 
-        /*the photo sits inside an arch-shaped frame*/
+    /*Photo inside an arch-shaped frame*/
     .photo-wrap {
         aspect-ratio: 4 / 4.6;
         background: radial-gradient(120% 90% at 50% 100%, rgba(37, 55, 69, 0.6), rgba(17, 33, 45, 0.35) 70%);
@@ -312,7 +312,7 @@
         width: min(16rem, 74vw);
     }
 
-    /*thin dashed line inside the arch*/
+    /*Thin dashed line inside the arch*/
     .photo-wrap::before {
         border: 1px dashed rgba(204, 208, 207, 0.15);
         border-radius: inherit;
@@ -361,7 +361,7 @@
     }
 }
 
-/*Computers: the photo sits at the bottom of the hero and slides behind the panel*/
+/*Computers: photo slides behind the bottom panel*/
 
 @media (min-width: 861px) {
     .photo-wrap {
@@ -381,7 +381,7 @@
     }
 }
 
-/*Computers with short windows: shrink the page to fit the screen with no scroll*/
+/*Short computer screens: smaller page so it fits without scrolling*/
 
 @media (min-width: 861px) and (max-height: 760px) {
     .home {
@@ -452,7 +452,7 @@
     }
 }
 
-/*Very short computer windows: tighten a little more*/
+/*Very short computer screens: a little smaller again*/
 
 @media (min-width: 861px) and (max-height: 620px) {
     .home {

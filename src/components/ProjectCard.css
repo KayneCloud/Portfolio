@@ -1,4 +1,4 @@
-/*Card: frosted panel that sticks for the stack effect*/
+/*Project card that sticks for the stacking effect*/
 
 .project-card {
     backdrop-filter: blur(12px);
@@ -8,7 +8,8 @@
     box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.45);
     overflow: hidden;
     position: sticky;
-    top: var(--top, calc(6.25rem + var(--i) * 24px)); /*--top is set for each card in Projects.jsx*/
+    /*Sticking position, calculated in Projects.jsx*/
+    top: var(--top, calc(6.25rem + var(--i) * 24px));
     transition: border-color 0.25s ease;
 }
 
@@ -16,7 +17,7 @@
     border-color: #4A5C6A;
 }
 
-/*thin light line along the top edge*/
+/*Thin light line along the top edge*/
 .project-card::before {
     background: linear-gradient(90deg, transparent, rgba(204, 208, 207, 0.5), transparent);
     content: "";
@@ -25,7 +26,7 @@
     position: absolute;
 }
 
-/*Top row: big outlined number + date*/
+/*Top row: big outlined number and date*/
 
 .card-top {
     align-items: center;
@@ -52,7 +53,7 @@
     padding: 0.25rem 0.75rem;
 }
 
-/*Body: title, summary, details grid*/
+/*Main part: title, description and details*/
 
 .card-body {
     padding: 1rem 1.75rem 1.5rem;
@@ -110,7 +111,7 @@
     line-height: 1.5;
 }
 
-/*Technologies: chips with logos, same look as the Home stack*/
+/*Technology chips with logos*/
 
 .tech-list {
     display: flex;
@@ -146,7 +147,7 @@
     filter: brightness(1.9);
 }
 
-/*Skills: plain text separated by dots*/
+/*Skills separated by dots*/
 
 .skill-list span + span::before {
     color: #4A5C6A;
@@ -154,7 +155,7 @@
     margin: 0 0.5rem;
 }
 
-/*Footer: darker strip with the GitHub button*/
+/*Bottom strip with the link buttons*/
 
 .card-footer {
     background-color: rgba(6, 20, 27, 0.5);
@@ -207,7 +208,7 @@
     transform: translateX(0.25rem);
 }
 
-/*Phones: one column*/
+/*Phones: details in one column*/
 
 @media (max-width: 600px) {
     .card-top,
@@ -230,7 +231,7 @@
     }
 }
 
-/*Short screens (laptops and small phones): a more compact card so the stack still fits*/
+/*Short screens: smaller cards so the stack still fits*/
 
 @media (max-height: 760px) {
     .card-top {

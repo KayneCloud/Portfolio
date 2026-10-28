@@ -1,10 +1,11 @@
-/*Main Layout*/
+/*Page layout*/
 
 .about {
     box-sizing: border-box;
     margin: 2rem auto;
     max-width: 68.75rem;
-    overflow-x: clip; /*stops the slide-in animation from making the page wider on phones*/
+    /*Stops the slide-in animation from widening the page*/
+    overflow-x: clip;
     padding: 0 1.5rem;
     width: 100%;
 }
@@ -30,7 +31,7 @@
     font-size: 1rem;
 }
 
-/*Epitech box*/
+/*Epitech box at the top*/
 
 .school {
     background: linear-gradient(135deg, rgba(37, 55, 69, 0.75), rgba(17, 33, 45, 0.95) 60%);
@@ -42,7 +43,7 @@
     position: relative;
 }
 
-/*thin light line along the top edge*/
+/*Thin light line along the top edge*/
 .school::before {
     background: linear-gradient(90deg, transparent, #CCD0CF, transparent);
     content: "";
@@ -54,7 +55,7 @@
     top: 0;
 }
 
-/*soft glow in the corner*/
+/*Soft glow in the corner*/
 .school::after {
     background: radial-gradient(closest-side, rgba(155, 168, 171, 0.18), transparent);
     border-radius: 50%;
@@ -167,7 +168,7 @@
     }
 }
 
-/*the phase titles are h2 for structure, but small and not animated*/
+/*Year titles: small and not animated*/
 .about .phase h2 {
     animation: none;
     font-size: 1.125rem;
@@ -181,7 +182,7 @@
     line-height: 1.5;
 }
 
-/*Timeline: one line down the middle*/
+/*Timeline with one line down the middle*/
 
 .timeline {
     margin-top: 4rem;
@@ -200,7 +201,7 @@
     width: 2px;
 }
 
-/*section titles sitting on the line*/
+/*Section titles sitting on the line*/
 .about .line-title {
     background-color: #06141B;
     border: 1px solid #4A5C6A;
@@ -217,7 +218,7 @@
     margin-top: 3rem;
 }
 
-/*each entry: two columns, the box goes in one of them*/
+/*Each entry has two columns; the box goes in one of them*/
 .entry {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -225,10 +226,11 @@
 }
 
 .entry + .entry {
-    margin-top: -1.5rem; /*left and right boxes overlap a little vertically*/
+    /*Left and right boxes overlap a little*/
+    margin-top: -1.5rem;
 }
 
-/*round marker on the line*/
+/*Round marker on the line*/
 .entry::after {
     background-color: #06141B;
     border: 2px solid #CCD0CF;
@@ -262,7 +264,7 @@
     text-align: right;
 }
 
-/*small arrow pointing at the line*/
+/*Small arrow pointing at the line*/
 .entry .box::before {
     background-color: #1B2A35;
     border: 1px solid #253745;
@@ -333,7 +335,7 @@
     color: #CCD0CF;
 }
 
-/*What I learned*/
+/*What I learned this year*/
 
 .learning-item {
     border-left: 3px solid #4A5C6A;
@@ -346,7 +348,7 @@
     margin-top: 0.5rem;
 }
 
-/*Soft skills & languages*/
+/*Soft skills and languages cards*/
 
 .skill-grid {
     align-items: start;
@@ -361,7 +363,7 @@
     }
 }
 
-/*Phones and small tablets: line on the left, every box on its right*/
+/*Phones and small tablets: line on the left, boxes on its right*/
 
 @media (max-width: 760px) {
     .school {
@@ -421,9 +423,9 @@
     }
 }
 
-/*Scroll animations*/
+/*Animations when scrolling*/
 
-/*rise up from the bottom with a blur (headings, phones, cards)*/
+/*Rises up from the bottom with a blur*/
 @keyframes about-reveal {
     from {
         filter: blur(10px);
@@ -438,7 +440,7 @@
     }
 }
 
-/*slide in from the side (timeline boxes on bigger screens)*/
+/*Slides in from the side*/
 @keyframes about-from-right {
     from {
         opacity: 0;
@@ -453,7 +455,7 @@
     }
 }
 
-/*the reverse: blur out and drift up when leaving at the top*/
+/*Blurs out and drifts up when leaving the top of the screen*/
 @keyframes about-hide {
     from {
         filter: blur(0);
@@ -468,10 +470,7 @@
     }
 }
 
-/*
- * Only enable the effect when supported and when
- * the visitor has not requested reduced motion.
- */
+/*Animations only in browsers that support them, for visitors who allow motion*/
 @supports (animation-timeline: view()) {
     @media (prefers-reduced-motion: no-preference) {
         .about h2,
@@ -489,7 +488,7 @@
     }
 }
 
-/*bigger screens: timeline boxes slide in from their side instead*/
+/*Bigger screens: timeline boxes slide in from their side*/
 @media (min-width: 761px) {
     @supports (animation-timeline: view()) {
         @media (prefers-reduced-motion: no-preference) {

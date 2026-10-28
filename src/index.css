@@ -39,13 +39,13 @@ footer {
     width: 100%;
 }
 
-/*Pages stretch so the footer always sits at the bottom of the screen*/
+/*Pages stretch so the footer stays at the bottom*/
 
 main {
     flex: 1;
 }
 
-/*period after titles*/
+/*Grey dot after titles*/
 
 .dot-accent {
     color: #4A5C6A;

@@ -1,4 +1,4 @@
-/*Window*/
+/*Terminal window*/
 
 .term {
     background-color: #0C0F12;
@@ -9,7 +9,7 @@
     overflow: hidden;
 }
 
-/*Top bar: tab, + and window buttons*/
+/*Top bar with the tab and window buttons*/
 
 .term-bar {
     align-items: stretch;
@@ -83,7 +83,7 @@
     padding: 0 1.125rem;
 }
 
-/*Text area*/
+/*Area where the lines are printed*/
 
 .term-body {
     color: #CCCCCC;
@@ -117,7 +117,7 @@
     color: #E06C75;
 }
 
-/*The line you are typing on*/
+/*Line you are typing on*/
 
 .term-row {
     display: flex;
@@ -135,7 +135,7 @@
     position: relative;
 }
 
-/*The real input is invisible; .term-mirror shows the text with a thin blinking cursor*/
+/*Hidden input: the text you see is a copy with a blinking cursor*/
 
 .term-live input {
     background: transparent;
@@ -175,7 +175,7 @@
     }
 }
 
-/*Y / N buttons*/
+/*Yes / No buttons*/
 
 .term-yn-wrap {
     flex-shrink: 0;
@@ -200,7 +200,7 @@
     color: #0C0F12;
 }
 
-/*Phones*/
+/*Phones: smaller text*/
 
 @media (max-width: 600px) {
     .term-body {

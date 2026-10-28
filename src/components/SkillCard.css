@@ -1,4 +1,4 @@
-/*Card: same family as the project cards*/
+/*Skill card, same style as the project cards*/
 
 .card {
     backdrop-filter: blur(12px);
@@ -15,7 +15,7 @@
     border-color: #4A5C6A;
 }
 
-/*thin light line along the top edge*/
+/*Thin light line along the top edge*/
 .card::before {
     background: linear-gradient(90deg, transparent, rgba(204, 208, 207, 0.5), transparent);
     content: "";
@@ -31,7 +31,7 @@
     text-transform: uppercase;
 }
 
-/*Lists: thin divider on top, one item per row*/
+/*Lists: one item per row*/
 
 .skills-list,
 .lang-list {
@@ -54,7 +54,7 @@
     padding-bottom: 0;
 }
 
-/*Soft skills: small square marker, like the timeline dots*/
+/*Soft skills: small square before each item*/
 
 .skills-list li {
     font-size: 0.875rem;
@@ -70,7 +70,7 @@
     width: 0.5rem;
 }
 
-/*Languages: flag, name, level pill*/
+/*Languages: flag, name and level*/
 
 .lang-list li {
     gap: 1rem;
