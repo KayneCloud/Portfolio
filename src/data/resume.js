@@ -57,7 +57,7 @@ export const skillCards = [
     {
         id: 3,
         title: "Soft skills",
-        items: ["Adaptability", "Teamwork", "Curiosity", "Eagerness to learn", "Critical thinking"],
+        items: ["Adaptability", "Teamwork", "Curiosity", "Ability to learn", "Critical thinking"],
     },
     {
         id: 4,
@@ -142,23 +142,32 @@ export const stackGroups = [
             { name: "Java", icon: DEVICON + "java/java-original.svg" },
             { name: "JavaScript", icon: DEVICON + "javascript/javascript-original.svg" },
             { name: "PHP", icon: DEVICON + "php/php-original.svg" },
+            { name: "HTML", icon: DEVICON + "html5/html5-original.svg" },
+            { name: "CSS", icon: DEVICON + "css3/css3-original.svg" },
         ],
     },
     {
         id: 3,
-        title: "Front-end",
+        title: "Frameworks",
         tools: [
-            { name: "HTML", icon: DEVICON + "html5/html5-original.svg" },
-            { name: "CSS", icon: DEVICON + "css3/css3-original.svg" },
             { name: "React", icon: DEVICON + "react/react-original.svg" },
+            { name: "Flask", icon: DEVICON + "flask/flask-original.svg", filter: "invert" },
+            { name: "JavaFX" },
         ],
     },
     {
         id: 4,
-        title: "Back-end & Data",
+        title: "Database",
         tools: [
-            { name: "Flask", icon: DEVICON + "flask/flask-original.svg", filter: "invert" },
             { name: "MySQL", icon: DEVICON + "mysql/mysql-original.svg", filter: "lighten" },
+        ],
+    },
+    {
+        id: 5,
+        title: "Concepts",
+        tools: [
+            { name: "OOP" },
+            { name: "REST API" },
         ],
     },
 ]

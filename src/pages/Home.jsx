@@ -61,7 +61,7 @@ function Home({ lang }) {
                     />
                     <svg width="0" height="0" className="feather-svg" aria-hidden="true">
                         <filter id="feather">
-                            <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="soft" />
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="soft" />
                             <feComposite in="SourceGraphic" in2="soft" operator="in" />
                         </filter>
                     </svg>
@@ -100,13 +100,13 @@ function Home({ lang }) {
                                         tool.url ? (
                                             <li key={tool.name}>
                                                 <a className="chip chip-link" href={tool.url} target="_blank" rel="noreferrer">
-                                                    <img src={tool.icon} alt="" className={tool.filter} />
+                                                    {tool.icon && <img src={tool.icon} alt="" className={tool.filter} />}
                                                     {tool.name}
                                                 </a>
                                             </li>
                                         ) : (
                                             <li key={tool.name} className="chip">
-                                                <img src={tool.icon} alt="" className={tool.filter} />
+                                                {tool.icon && <img src={tool.icon} alt="" className={tool.filter} />}
                                                 {tool.name}
                                             </li>
                                         )

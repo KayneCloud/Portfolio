@@ -120,8 +120,8 @@
     object-fit: contain;
     position: relative;
     width: min(34rem, 40vw, 66vh);
-    filter: brightness(100%) url(#feather);
-    opacity: 0.85;
+    filter: brightness(80%) url(#feather);
+    opacity: 0.95;
 }
 
 .feather-svg {
@@ -226,7 +226,7 @@
 .stack-groups {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1.6fr 1fr auto auto;
 }
 
 .group h3 {
@@ -435,7 +435,7 @@
     }
 
     .stack-groups {
-        grid-template-columns: 1.2fr 1.15fr 1fr 0.9fr;
+        grid-template-columns: 1fr 1.6fr 1fr auto auto;
     }
 
     .group h3 {

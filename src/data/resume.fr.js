@@ -60,7 +60,7 @@ export const skillCards = [
     {
         id: 3,
         title: "Savoir-être",
-        items: ["Adaptabilité", "Travail en équipe", "Curiosité", "Envie d'apprendre", "Esprit critique"],
+        items: ["Adaptabilité", "Travail en équipe", "Curiosité", "Capacité d'apprentissage", "Esprit critique"],
     },
     {
         id: 4,
@@ -110,7 +110,7 @@ export const certifications = certificationsEn.map((cert, index) => ({
 }))
 
 // Same stack as the English file, with the group titles translated
-const titlesFr = ["Cloud & Outils", "Langages", "Front-end", "Back-end & Données"]
+const titlesFr = ["Cloud & Outils", "Langages", "Frameworks", "Base de données", "Concepts"]
 
 export const stackGroups = stackGroupsEn.map((group, index) => ({
     ...group,

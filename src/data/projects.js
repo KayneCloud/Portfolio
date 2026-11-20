@@ -24,10 +24,11 @@ export const projectList = [
         id: 2,
         title: "Java Game",
         date: "Now - 11/2026",
-        context: "Epitech team project, build a 2D game with Java.",
-        description: "A 2D video game I am currently building in Java as an Epitech team project. It is my first project in Java, a language I started learning in October 2026, and it is helping me learn object-oriented programming: organising a program into reusable building blocks that each handle one part of the game.",
+        context: "Epitech team project: a card game in Java.",
+        description: "A card game I am building in Java with a graphical interface made in JavaFX, as an Epitech team project. The cards, the deck and the players are each modelled as objects (object-oriented programming), and the game logic handles the rules, the turns and the scores. It is my first project in Java, a language I started learning in October 2026.",
         technologies: [
             { name: "Java", icon: DEVICON + "java/java-original.svg" },
+            { name: "JavaFX" },
             { name: "OOP" },
         ],
         skills: ["Object-oriented programming", "Teamwork", "Game logic"],
