@@ -68,7 +68,6 @@ export const skillCards = [
         languages: [
             { name: "Anglais", level: "Natif", flag: "uk" },
             { name: "Français", level: "Natif", flag: "fr" },
-            { name: "Japonais", level: "Élémentaire", flag: "jp" },
         ],
     },
 ]
@@ -82,7 +81,7 @@ export const learning = [
     {
         id: 2,
         title: "Prendre en main Linux",
-        text: "Avec le cours Introduction to Linux (LFS101) de la Linux Foundation, j'apprends à travailler en ligne de commande : me déplacer dans le système de fichiers, gérer les fichiers et les permissions, et comprendre l'organisation d'un système Linux, des compétences essentielles pour travailler avec des serveurs dans le Cloud.",
+        text: "Avec le cours Introduction to Linux (LFS101) de la Linux Foundation, terminé en novembre 2026, j'ai appris à travailler en ligne de commande : me déplacer dans le système de fichiers, gérer les fichiers et les permissions, et comprendre l'organisation d'un système Linux, des compétences essentielles pour travailler avec des serveurs dans le Cloud.",
     },
     {
         id: 3,
@@ -102,7 +101,7 @@ export const learning = [
 ]
 
 // Same certificates as the English file, with the status translated
-const statusFr = ["Certifié · 08/2026", "En cours · 12/2026", "En cours · 11/2026"]
+const statusFr = ["Certifié · 08/2026", "En cours · 12/2026", "Terminé · 11/2026"]
 
 export const certifications = certificationsEn.map((cert, index) => ({
     ...cert,
@@ -110,11 +109,14 @@ export const certifications = certificationsEn.map((cert, index) => ({
 }))
 
 // Same stack as the English file, with the group titles translated
-const titlesFr = ["Cloud & Outils", "Langages", "Frameworks", "Base de données", "Concepts"]
+const titlesFr = ["Cloud & DevOps", "Systèmes", "Langages", "Développement", "Concepts", "Gestion de projet"]
+
+const namesFr = { "OOP": "POO", "REST API": "API REST", "Requirements analysis": "Analyse des besoins", "Budgeting": "Budgétisation" }
 
 export const stackGroups = stackGroupsEn.map((group, index) => ({
     ...group,
     title: titlesFr[index],
+    tools: group.tools.map((tool) => ({ ...tool, name: namesFr[tool.name] ?? tool.name })),
 }))
 
 export const school = {

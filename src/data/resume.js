@@ -65,7 +65,6 @@ export const skillCards = [
         languages: [
             { name: "English", level: "Native", flag: "uk" },
             { name: "French", level: "Native", flag: "fr" },
-            { name: "Japanese", level: "Elementary", flag: "jp" },
         ],
     },
 ]
@@ -79,7 +78,7 @@ export const learning = [
     {
         id: 2,
         title: "Getting comfortable with Linux",
-        text: "Through the Linux Foundation's Introduction to Linux course (LFS101), I am learning to work from the command line: navigating the file system, managing files and permissions, and understanding how a Linux system is organised — essential skills for working with servers in the cloud.",
+        text: "Through the Linux Foundation's Introduction to Linux course (LFS101), completed in November 2026, I learned to work from the command line: navigating the file system, managing files and permissions, and understanding how a Linux system is organised — essential skills for working with servers in the cloud.",
     },
     {
         id: 3,
@@ -115,8 +114,8 @@ export const certifications = [
     {
         id: 3,
         name: "Introduction to Linux (LFS101)",
-        status: "In progress · 11/2026",
-        planned: true,
+        status: "Completed · 11/2026",
+        planned: false,
         logo: "linux/linux-original.svg",
     },
 ]
@@ -126,16 +125,27 @@ const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/"
 export const stackGroups = [
     {
         id: 1,
-        title: "Cloud & Tools",
+        title: "Cloud & DevOps",
         tools: [
-            {name: "AWS", icon: DEVICON + "amazonwebservices/amazonwebservices-plain-wordmark.svg"},
-            {name: "Git", icon: DEVICON + "git/git-original.svg" },
+            { name: "AWS", icon: DEVICON + "amazonwebservices/amazonwebservices-plain-wordmark.svg" },
+            { name: "Docker", icon: DEVICON + "docker/docker-original.svg" },
+            { name: "Kubernetes", icon: DEVICON + "kubernetes/kubernetes-plain.svg" },
+            { name: "Git", icon: DEVICON + "git/git-original.svg" },
             { name: "GitHub", icon: DEVICON + "github/github-original.svg", filter: "invert", url: "https://github.com/KayneCloud" },
-            { name: "PowerShell", icon: DEVICON + "powershell/powershell-original.svg" },
         ],
     },
     {
         id: 2,
+        title: "Systems",
+        tools: [
+            { name: "Linux", icon: DEVICON + "linux/linux-original.svg" },
+            { name: "SSH" },
+            { name: "PowerShell", icon: DEVICON + "powershell/powershell-original.svg" },
+            { name: "Bash", icon: DEVICON + "bash/bash-original.svg", filter: "invert" },
+        ],
+    },
+    {
+        id: 3,
         title: "Languages",
         tools: [
             { name: "Python", icon: DEVICON + "python/python-original.svg" },
@@ -147,18 +157,12 @@ export const stackGroups = [
         ],
     },
     {
-        id: 3,
-        title: "Frameworks",
+        id: 4,
+        title: "Development",
         tools: [
             { name: "React", icon: DEVICON + "react/react-original.svg" },
             { name: "Flask", icon: DEVICON + "flask/flask-original.svg", filter: "invert" },
             { name: "JavaFX" },
-        ],
-    },
-    {
-        id: 4,
-        title: "Database",
-        tools: [
             { name: "MySQL", icon: DEVICON + "mysql/mysql-original.svg", filter: "lighten" },
         ],
     },
@@ -168,6 +172,16 @@ export const stackGroups = [
         tools: [
             { name: "OOP" },
             { name: "REST API" },
+        ],
+    },
+    {
+        id: 6,
+        title: "Project management",
+        tools: [
+            { name: "Gantt" },
+            { name: "Trello", icon: DEVICON + "trello/trello-plain.svg" },
+            { name: "Requirements analysis" },
+            { name: "Budgeting" },
         ],
     },
 ]
