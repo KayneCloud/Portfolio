@@ -61,7 +61,7 @@ export const projectList = [
         ],
         skills: ["User interface", "Game art and sound", "Teamwork"],
         links: [
-            { label: "Game page", url: "oni-shin-tan/" },
+            { label: "Game page", url: "oni-shin-tan/index.html" },
             { label: "Download for Windows", url: "https://github.com/PierreDer13/PortFolio/releases/latest/download/OniShinTan-windows.zip" },
         ],
     },
