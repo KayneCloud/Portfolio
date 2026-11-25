@@ -2,6 +2,36 @@ const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/"
 
 export const projectList = [
     {
+        id: 6,
+        title: "Chocolatine",
+        date: "Now - 12/2026",
+        context: "Individual Epitech project: a complete CI/CD pipeline with GitHub Actions.",
+        description: "An individual Epitech project where I build a complete CI/CD pipeline with GitHub Actions. Every time code is pushed to the repository, GitHub automatically runs a series of steps to check, build and test it, so problems are caught straight away instead of being found later by hand.",
+        technologies: [
+            { name: "GitHub Actions", icon: DEVICON + "githubactions/githubactions-original.svg" },
+            { name: "Git", icon: DEVICON + "git/git-original.svg" },
+            { name: "GitHub", icon: DEVICON + "github/github-original.svg", filter: "invert" },
+        ],
+        skills: ["CI/CD", "Automation", "Git workflow"],
+        links: [
+            { label: "No source code yet", url: "" },
+        ],
+    },
+    {
+        id: 7,
+        title: "Popeye",
+        date: "11/2026",
+        context: "Individual Epitech project: deploying an application with Docker.",
+        description: "An individual Epitech project where I deploy an application with Docker. Docker packages the application and everything it needs into containers, so it starts and runs the same way on any machine, from my computer to a server.",
+        technologies: [
+            { name: "Docker", icon: DEVICON + "docker/docker-original.svg" },
+        ],
+        skills: ["Containerisation", "Deployment"],
+        links: [
+            { label: "No source code yet", url: "" },
+        ],
+    },
+    {
         id: 1,
         title: "Job board website",
         date: "10/2026",
