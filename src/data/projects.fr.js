@@ -34,12 +34,11 @@ export const projectList = [
     },
     {
         ...en[3],
-        title: "Jeu en Java",
-        date: "11/2026",
-        context: "Projet d'équipe Epitech : un jeu de cartes en Java.",
-        description: "Un jeu de cartes que j'ai développé en Java avec une interface graphique en JavaFX, dans le cadre d'un projet d'équipe Epitech. Les cartes, le paquet et les joueurs sont chacun modélisés comme des objets (programmation orientée objet), et la logique de jeu gère les règles, les tours et le calcul des scores. C'est mon premier projet en Java, un langage que j'ai commencé à apprendre en octobre 2026.",
-        skills: ["Programmation orientée objet", "Travail en équipe", "Logique de jeu"],
-        links: en[3].links.map((link) => ({ ...link, label: "Pas encore de code source" })),
+        context: "Projet d'équipe Epitech (T-JAV-501), réalisé en binôme : un jeu de cartes en Java.",
+        description: "Un jeu de cartes de démons et de dieux dans le Japon de l'époque d'Edo : quatre héros, 122 cartes et un dragon à huit têtes qui attend à la fin. Je l'ai réalisé en binôme dans le cadre d'un projet d'équipe Epitech. J'étais chargé de tout ce que le joueur voit et entend : l'interface en JavaFX, les illustrations et le son, tandis que mon binôme a réalisé le modèle du jeu, le moteur, les données et l'adversaire contrôlé par l'ordinateur. C'était mon premier projet en Java, un langage que j'ai commencé à apprendre en octobre 2026.",
+        role: "J'ai réalisé l'interface, les illustrations et le son ; mon binôme a réalisé le modèle, le moteur, les données et l'IA.",
+        skills: ["Interface utilisateur", "Illustrations et son", "Travail en équipe"],
+        links: [{ ...en[3].links[0], label: "Page du jeu" }, { ...en[3].links[1], label: "Télécharger pour Windows" }],
     },
     {
         ...en[4],

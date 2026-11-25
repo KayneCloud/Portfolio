@@ -49,18 +49,20 @@ export const projectList = [
     },
     {
         id: 2,
-        title: "Java Game",
+        title: "Oni Shin Tan",
         date: "11/2026",
-        context: "Epitech team project: a card game in Java.",
-        description: "A card game I built in Java with a graphical interface made in JavaFX, as an Epitech team project. The cards, the deck and the players are each modelled as objects (object-oriented programming), and the game logic handles the rules, the turns and the scores. It is my first project in Java, a language I started learning in October 2026.",
+        context: "Epitech team project (T-JAV-501), built with a partner: a card game in Java.",
+        description: "A card game of demons and gods set in Edo-period Japan: four heroes, 122 cards and an eight-headed dragon waiting at the end. I built it with a partner as an Epitech team project. I was in charge of everything the player sees and hears: the JavaFX interface, the art and the sound, while my partner built the game model, the engine, the data and the computer opponent. It was my first project in Java, a language I started learning in October 2026.",
+        role: "I built the interface, the art and the sound; my partner built the model, the engine, the data and the AI.",
         technologies: [
             { name: "Java", icon: DEVICON + "java/java-original.svg" },
             { name: "JavaFX" },
             { name: "OOP" },
         ],
-        skills: ["Object-oriented programming", "Teamwork", "Game logic"],
+        skills: ["User interface", "Game art and sound", "Teamwork"],
         links: [
-            { label: "No source code yet", url: "" },
+            { label: "Game page", url: "oni-shin-tan/" },
+            { label: "Download for Windows", url: "https://github.com/PierreDer13/PortFolio/releases/latest/download/OniShinTan-windows.zip" },
         ],
     },
     {
