@@ -18,6 +18,22 @@ export const projectList = [
         ],
     },
     {
+        id: 3,
+        title: "Smart Fridge",
+        date: "Now - 12/2026",
+        context: "Epitech group project in project management.",
+        description: "A home-appliance company is considering launching a smart connected fridge, and our group has to prepare the project before any money is invested. We do not build the fridge: we plan how it would be built and launched. This means framing the project, planning the research, building a Gantt chart, defining the team's roles and skills, listing the resources needed, proposing a budget, identifying the main risks and how to reduce them, and writing messages for both the project team and the company's board.",
+        technologies: [
+            { name: "Gantt chart" },
+            { name: "Git", icon: DEVICON + "git/git-original.svg" },
+            { name: "PMBOK / PRINCE2" },
+        ],
+        skills: ["Project planning", "Budgeting", "Risk management", "Communication"],
+        links: [
+            { label: "No source code yet", url: "" },
+        ],
+    },
+    {
         id: 7,
         title: "Popeye",
         date: "11/2026",
@@ -27,6 +43,22 @@ export const projectList = [
             { name: "Docker", icon: DEVICON + "docker/docker-original.svg" },
         ],
         skills: ["Containerisation", "Deployment"],
+        links: [
+            { label: "No source code yet", url: "" },
+        ],
+    },
+    {
+        id: 2,
+        title: "Java Game",
+        date: "11/2026",
+        context: "Epitech team project: a card game in Java.",
+        description: "A card game I built in Java with a graphical interface made in JavaFX, as an Epitech team project. The cards, the deck and the players are each modelled as objects (object-oriented programming), and the game logic handles the rules, the turns and the scores. It is my first project in Java, a language I started learning in October 2026.",
+        technologies: [
+            { name: "Java", icon: DEVICON + "java/java-original.svg" },
+            { name: "JavaFX" },
+            { name: "OOP" },
+        ],
+        skills: ["Object-oriented programming", "Teamwork", "Game logic"],
         links: [
             { label: "No source code yet", url: "" },
         ],
@@ -48,38 +80,6 @@ export const projectList = [
                 links: [
             { label: "Live demo", url: "https://chefs-dev.vercel.app" },
             { label: "Source code", url: "https://github.com/KayneCloud/Job_Board" },
-        ],
-    },
-    {
-        id: 2,
-        title: "Java Game",
-        date: "Now - 11/2026",
-        context: "Epitech team project: a card game in Java.",
-        description: "A card game I am building in Java with a graphical interface made in JavaFX, as an Epitech team project. The cards, the deck and the players are each modelled as objects (object-oriented programming), and the game logic handles the rules, the turns and the scores. It is my first project in Java, a language I started learning in October 2026.",
-        technologies: [
-            { name: "Java", icon: DEVICON + "java/java-original.svg" },
-            { name: "JavaFX" },
-            { name: "OOP" },
-        ],
-        skills: ["Object-oriented programming", "Teamwork", "Game logic"],
-        links: [
-            { label: "No source code yet", url: "" },
-        ],
-    },
-    {
-        id: 3,
-        title: "Smart Fridge",
-        date: "Now - 12/2026",
-        context: "Epitech group project in project management.",
-        description: "A home-appliance company is considering launching a smart connected fridge, and our group has to prepare the project before any money is invested. We do not build the fridge: we plan how it would be built and launched. This means framing the project, planning the research, building a Gantt chart, defining the team's roles and skills, listing the resources needed, proposing a budget, identifying the main risks and how to reduce them, and writing messages for both the project team and the company's board.",
-        technologies: [
-            { name: "Gantt chart" },
-            { name: "Git", icon: DEVICON + "git/git-original.svg" },
-            { name: "PMBOK / PRINCE2" },
-        ],
-        skills: ["Project planning", "Budgeting", "Risk management", "Communication"],
-        links: [
-            { label: "No source code yet", url: "" },
         ],
     },
     {
